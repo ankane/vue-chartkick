@@ -1,0 +1,20 @@
+{
+  "name": "vue-chartkick",
+  "version": "0.1.0",
+  "main": "dist/vue-chartkick.js",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "chartkick": "^2.0.1"
+  },
+  "homepage": "https://github.com/ankane/vue-chartkick",
+  "authors": [
+    "Andrew Kane <andrew@chartkick.com>"
+  ],
+  "description": "Create beautiful charts with one line in Vue.js",
+  "keywords": [
+    "charts"
+  ],
+  "license": "MIT"
+}

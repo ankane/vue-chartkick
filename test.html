@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Chartkick</title>
+
+    <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.1.0/chartkick.js"></script>
+    <script src="dist/vue-chartkick.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <line-chart :data="data"></line-chart>
+      <pie-chart :data='[["Blueberry", 44], ["Strawberry", 23]]'></pie-chart>
+      <column-chart :data='[["Sun", 32], ["Mon", 46], ["Tue", 28]]'></column-chart>
+      <bar-chart :data='[["Work", 32], ["Play", 1492]]'></bar-chart>
+      <area-chart :data='{"2013-02-10 00:00:00 -0800": 11, "2013-02-11 00:00:00 -0800": 6}'></area-chart>
+      <scatter-chart :data='[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9]]'></scatter-chart>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]]
+        }
+      })
+    </script>
+  </body>
+</html>
