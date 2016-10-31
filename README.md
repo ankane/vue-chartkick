@@ -215,7 +215,7 @@ And then the Chartkick libraries
   var app = new Vue({
     el: "#app",
     data: {
-      chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]]
+      chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
     }
   })
 </script>
