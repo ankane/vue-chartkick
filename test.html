@@ -24,6 +24,11 @@
         el: "#app",
         data: {
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]]
+        },
+        mounted: function() {
+          setTimeout(() => {
+            this.data = this.data.concat([["Aug", 10]])
+          }, 1000)
         }
       })
     </script>

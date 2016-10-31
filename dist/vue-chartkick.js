@@ -68,7 +68,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var createComponent = function(tagName, chartType) {
 	  Vue.component(tagName, {
-	    props: ["data", "id", "width", "height", "min", "max", "style"],
+	    props: ["data", "id", "width", "height", "min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"],
 	    template: '<div v-bind:id="chartId" v-bind:style="chartStyle">Loading...</div>',
 	    data: function() {
 	      return {
@@ -77,6 +77,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    computed: {
 	      chartStyle: function() {
+	        // hack to watch data and options
+	        this.data
+	        this.chartOptions
+
 	        return {
 	          height: this.height || "300px",
 	          lineHeight: this.height || "300px",
@@ -86,22 +90,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	          fontSize: "14px",
 	          fontFamily: "'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif"
 	        }
+	      },
+	      chartOptions: function() {
+	        var options = {}
+	        var props = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"]
+	        for (var i = 0; i < props.length; i++) {
+	          var prop = props[i]
+	          if (this[prop]) {
+	            options[prop] = this[prop]
+	          }
+	        }
+	        return options
 	      }
 	    },
 	    created: function() {
 	      this.chartId = this.chartId || this.id || ("chart-" + chartId++)
 	    },
 	    mounted: function() {
-	      var data = this.data
-	      var options = {}
-	      var props = ["min", "max"]
-	      for (var i = 0; i < props.length; i++) {
-	        var prop = props[i]
-	        if (this[prop]) {
-	          options[prop] = this[prop]
-	        }
+	      this.renderChart()
+	    },
+	    updated: function() {
+	      this.renderChart()
+	    },
+	    methods: {
+	      renderChart: function() {
+	        new chartType(this.chartId, this.data, this.chartOptions)
 	      }
-	      new chartType(this.chartId, data, options)
 	    }
 	  })
 	}
