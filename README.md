@@ -206,7 +206,7 @@ And then the Chartkick libraries
 
 ## Example
 
-```html
+```vue
 <div id="app">
   <line-chart :data="chartData"></line-chart>
 </div>
