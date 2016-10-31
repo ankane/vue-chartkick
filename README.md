@@ -204,6 +204,23 @@ And then the Chartkick libraries
 <script src="dist/vue-chartkick.js"></script>
 ```
 
+### Example
+
+```html
+<div id="app">
+  <line-chart :data="chartData"></line-chart>
+</div>
+
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]]
+    }
+  })
+</script>
+```
+
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
