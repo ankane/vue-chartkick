@@ -204,7 +204,7 @@ And then the Chartkick libraries
 <script src="dist/vue-chartkick.js"></script>
 ```
 
-### Example
+## Example
 
 ```html
 <div id="app">
