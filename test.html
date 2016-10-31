@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="app">
-      <line-chart :data="data"></line-chart>
+      <line-chart :data="data" :max="max"></line-chart>
       <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
@@ -23,11 +23,13 @@
       var app = new Vue({
         el: "#app",
         data: {
-          data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]]
+          data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
+          max: 10
         },
         mounted: function() {
           setTimeout(() => {
             this.data = this.data.concat([["Aug", 10]])
+            this.max = this.max += 5
           }, 1000)
         }
       })
