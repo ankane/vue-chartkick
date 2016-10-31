@@ -41,7 +41,7 @@ Area chart
 Scatter chart
 
 ```vue
-<scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9]]"></scatter-chart>
+<scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6]]"></scatter-chart>
 ```
 
 Geo chart - *Google Charts*
