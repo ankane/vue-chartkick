@@ -194,7 +194,7 @@ window.Highcharts = require('highcharts');
 Include the charting library
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
 ```
 
 And then the Chartkick libraries
