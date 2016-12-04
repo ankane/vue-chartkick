@@ -11,8 +11,9 @@ var Chartkick = require("chartkick")
 var chartId = 1
 
 var createComponent = function(tagName, chartType) {
+  var chartProps = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library", "download", "refresh", "donut"]
   Vue.component(tagName, {
-    props: ["data", "id", "width", "height", "min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"],
+    props: ["data", "id", "width", "height"].concat(chartProps),
     template: '<div v-bind:id="chartId" v-bind:style="chartStyle">Loading...</div>',
     data: function() {
       return {
@@ -37,7 +38,7 @@ var createComponent = function(tagName, chartType) {
       },
       chartOptions: function() {
         var options = {}
-        var props = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"]
+        var props = chartProps
         for (var i = 0; i < props.length; i++) {
           var prop = props[i]
           if (this[prop]) {
