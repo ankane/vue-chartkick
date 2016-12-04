@@ -58,7 +58,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Vue Chartkick
 	 * Create beautiful charts with one line in Vue.js
 	 * https://github.com/ankane/vue-chartkick
-	 * v0.1.1
+	 * v0.1.2
 	 * @license MIT
 	 */
 
@@ -67,8 +67,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var chartId = 1
 
 	var createComponent = function(tagName, chartType) {
+	  var chartProps = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library", "download", "refresh", "donut"]
 	  Vue.component(tagName, {
-	    props: ["data", "id", "width", "height", "min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"],
+	    props: ["data", "id", "width", "height"].concat(chartProps),
 	    template: '<div v-bind:id="chartId" v-bind:style="chartStyle">Loading...</div>',
 	    data: function() {
 	      return {
@@ -93,7 +94,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      },
 	      chartOptions: function() {
 	        var options = {}
-	        var props = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library"]
+	        var props = chartProps
 	        for (var i = 0; i < props.length; i++) {
 	          var prop = props[i]
 	          if (this[prop]) {
