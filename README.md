@@ -242,13 +242,13 @@ window.Highcharts = require('highcharts');
 Include the charting library
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.bundle.js"></script>
 ```
 
 And then the Chartkick libraries
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.1.0/chartkick.js"></script>
+<script src="https://unpkg.com/chartkick@2.2.1"></script>
 <script src="dist/vue-chartkick.js"></script>
 ```
 
