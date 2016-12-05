@@ -122,6 +122,36 @@ Axis titles
 <line-chart xtitle="Time" ytitle="Population"></line-chart>
 ```
 
+Straight lines between points instead of a curve
+
+```vue
+<line-chart :curve="false"></line-chart>
+```
+
+Show or hide legend
+
+```vue
+<line-chart :legend="true"></line-chart>
+```
+
+Specify legend position
+
+```vue
+<line-chart legend="bottom"></line-chart>
+```
+
+Donut chart
+
+```vue
+<line-chart :donut="true"></line-chart>
+```
+
+Refresh data from a remote source every `n` seconds
+
+```vue
+<line-chart :refresh="60"></line-chart>
+```
+
 You can pass options directly to the charting library with:
 
 ```vue
