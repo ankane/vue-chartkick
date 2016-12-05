@@ -6,12 +6,12 @@
 
     <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
-    <script src="https://unpkg.com/chartkick@2.2.0"></script>
+    <script src="https://unpkg.com/chartkick@2.2.1"></script>
     <script src="dist/vue-chartkick.js"></script>
   </head>
   <body>
     <div id="app">
-      <line-chart :data="data" :max="max"></line-chart>
+      <line-chart :data="data" :max="max" legend="bottom" :curve="false"></line-chart>
       <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
