@@ -143,7 +143,7 @@ Specify legend position
 Donut chart
 
 ```vue
-<line-chart :donut="true"></line-chart>
+<pie-chart :donut="true"></line-chart>
 ```
 
 Refresh data from a remote source every `n` seconds
