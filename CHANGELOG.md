@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Added `curve`, `legend`, and `title` options
+
 ## 0.1.2
 
 - Added `download`, `refresh`, and `donut` options
