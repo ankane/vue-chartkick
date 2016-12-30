@@ -95,7 +95,7 @@ Min and max values
 Colors
 
 ```vue
-<line-chart :colors="['pink', '#999']"></line-chart>
+<line-chart :colors="['#b00', '#666']"></line-chart>
 ```
 
 Stacked columns or bars
