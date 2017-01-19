@@ -52,15 +52,10 @@ var createComponent = function(tagName, chartType) {
       this.chartId = this.chartId || this.id || ("chart-" + chartId++)
     },
     mounted: function() {
-      this.renderChart()
+      this.chart = new chartType(this.chartId, this.data, this.chartOptions)
     },
     updated: function() {
-      this.renderChart()
-    },
-    methods: {
-      renderChart: function() {
-        new chartType(this.chartId, this.data, this.chartOptions)
-      }
+      this.chart.updateData(this.data, this.chartOptions)
     }
   })
 }

@@ -9,7 +9,7 @@
   "license": "MIT",
   "peerDependencies": {
     "vue": "*",
-    "chartkick": "*"
+    "chartkick": ">=2.2.0"
   },
   "authors": [
     "ankane"

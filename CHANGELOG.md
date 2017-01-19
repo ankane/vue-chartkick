@@ -1,3 +1,7 @@
+## 0.1.4 [unreleased]
+
+- Use `updateData` to refresh charts
+
 ## 0.1.3
 
 - Added `curve`, `legend`, and `title` options
