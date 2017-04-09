@@ -65,7 +65,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var chartId = 1
 
 	var createComponent = function(Vue, tagName, chartType) {
-	  var chartProps = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library", "download", "refresh", "donut", "legend", "curve", "title"]
+	  var chartProps = [
+	    "min", "max", "colors", "stacked", "discrete", "label", "xtitle",
+	    "ytitle", "library", "download", "refresh", "donut", "legend",
+	    "curve", "title", "points", "xtype"
+	  ]
 	  Vue.component(tagName, {
 	    props: ["data", "id", "width", "height"].concat(chartProps),
 	    template: '<div v-bind:id="chartId" v-bind:style="chartStyle">Loading...</div>',
