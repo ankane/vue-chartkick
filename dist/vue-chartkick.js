@@ -66,9 +66,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var createComponent = function(Vue, tagName, chartType) {
 	  var chartProps = [
-	    "min", "max", "colors", "stacked", "discrete", "label", "xtitle",
-	    "ytitle", "library", "download", "refresh", "donut", "legend",
-	    "curve", "title", "points", "xtype"
+	    "colors", "curve", "discrete", "donut", "download", "label",
+	    "legend", "library", "max", "min", "points", "refresh",
+	    "stacked", "title", "xtitle", "xtype", "ytitle"
 	  ]
 	  Vue.component(tagName, {
 	    props: ["data", "id", "width", "height"].concat(chartProps),
