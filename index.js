@@ -6,11 +6,9 @@
  * @license MIT
  */
 
-var Vue = require("vue")
-var Chartkick = require("chartkick")
 var chartId = 1
 
-var createComponent = function(tagName, chartType) {
+var createComponent = function(Vue, tagName, chartType) {
   var chartProps = ["min", "max", "colors", "stacked", "discrete", "label", "xtitle", "ytitle", "library", "download", "refresh", "donut", "legend", "curve", "title"]
   Vue.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
@@ -60,11 +58,24 @@ var createComponent = function(tagName, chartType) {
   })
 }
 
-createComponent("line-chart", Chartkick.LineChart)
-createComponent("pie-chart", Chartkick.PieChart)
-createComponent("column-chart", Chartkick.ColumnChart)
-createComponent("bar-chart", Chartkick.BarChart)
-createComponent("area-chart", Chartkick.AreaChart)
-createComponent("scatter-chart", Chartkick.ScatterChart)
-createComponent("geo-chart", Chartkick.GeoChart)
-createComponent("timeline", Chartkick.Timeline)
+var VueChartkick = {
+  version: "0.1.3",
+  install: function(Vue, options) {
+    var Chartkick = options.Chartkick
+    createComponent(Vue, "line-chart", Chartkick.LineChart)
+    createComponent(Vue, "pie-chart", Chartkick.PieChart)
+    createComponent(Vue, "column-chart", Chartkick.ColumnChart)
+    createComponent(Vue, "bar-chart", Chartkick.BarChart)
+    createComponent(Vue, "area-chart", Chartkick.AreaChart)
+    createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
+    createComponent(Vue, "geo-chart", Chartkick.GeoChart)
+    createComponent(Vue, "timeline", Chartkick.Timeline)
+  }
+}
+
+// in browser
+if (typeof window !== "undefined" && window.Vue && window.Chartkick) {
+  window.Vue.use(VueChartkick, {Chartkick: window.Chartkick})
+}
+
+module.exports = VueChartkick
