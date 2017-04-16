@@ -221,13 +221,7 @@ Vue.use(VueChartkick, { Chartkick })
 
 ### Google Charts
 
-Run
-
-```sh
-npm install chartkick vue-chartkick --save
-```
-
-And add
+Add
 
 ```es6
 import Chartkick from 'chartkick'
@@ -236,7 +230,7 @@ import VueChartkick from 'vue-chartkick'
 Vue.use(VueChartkick, { Chartkick })
 ```
 
-Include on the page
+And include on the page
 
 ```html
 <script src="https://www.gstatic.com/charts/loader.js"></script>
