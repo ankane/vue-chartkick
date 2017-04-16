@@ -212,12 +212,31 @@ npm install chart.js --save
 And add
 
 ```es6
-window.Chart = require('chart.js');
+import Chartkick from 'chartkick'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(VueChartkick, { Chartkick })
 ```
 
 ### Google Charts
 
-Include
+Run
+
+```sh
+npm install chartkick vue-chartkick --save
+```
+
+And add
+
+```es6
+import Chartkick from 'chartkick'
+import VueChartkick from 'vue-chartkick'
+
+Vue.use(VueChartkick, { Chartkick })
+```
+
+Include on the page
 
 ```html
 <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -233,8 +252,13 @@ npm install highcharts --save
 
 And add
 
-```javascript
-window.Highcharts = require('highcharts');
+```es6
+import Chartkick from 'chartkick'
+import VueChartkick from 'vue-chartkick'
+import Highcharts from 'highcharts'
+
+window.Highcharts = Highcharts
+Vue.use(VueChartkick, { Chartkick })
 ```
 
 ### Without NPM
@@ -242,14 +266,14 @@ window.Highcharts = require('highcharts');
 Include the charting library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chart.js@2.5.0/dist/Chart.bundle.js"></script>
 ```
 
 And then the Chartkick libraries
 
 ```html
 <script src="https://unpkg.com/chartkick@2.2.1"></script>
-<script src="dist/vue-chartkick.js"></script>
+<script src="https://unpkg.com/vue-chartkick@0.2.0"></script>
 ```
 
 ## Example

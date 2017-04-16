@@ -1,4 +1,4 @@
-## 0.2.0 [unreleased]
+## 0.2.0
 
 - Changed to Vue plugin
 - Use `updateData` to refresh charts

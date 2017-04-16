@@ -58,7 +58,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Vue Chartkick
 	 * Create beautiful charts with one line in Vue.js
 	 * https://github.com/ankane/vue-chartkick
-	 * v0.1.3
+	 * v0.2.0
 	 * @license MIT
 	 */
 
@@ -119,7 +119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	var VueChartkick = {
-	  version: "0.1.3",
+	  version: "0.2.0",
 	  install: function(Vue, options) {
 	    var Chartkick = options.Chartkick
 	    createComponent(Vue, "line-chart", Chartkick.LineChart)
