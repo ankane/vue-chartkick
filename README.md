@@ -266,7 +266,7 @@ Include the charting library
 And then the Chartkick libraries
 
 ```html
-<script src="https://unpkg.com/chartkick@2.2.1"></script>
+<script src="https://unpkg.com/chartkick@2.2.3"></script>
 <script src="https://unpkg.com/vue-chartkick@0.2.0"></script>
 ```
 
