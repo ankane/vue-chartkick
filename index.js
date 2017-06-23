@@ -82,4 +82,6 @@ if (typeof window !== "undefined" && window.Vue && window.Chartkick) {
   window.Vue.use(VueChartkick, {Chartkick: window.Chartkick})
 }
 
-module.exports = VueChartkick
+if (typeof module !== "undefined") {
+  module.exports = VueChartkick
+}
