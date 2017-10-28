@@ -260,13 +260,13 @@ Vue.use(VueChartkick, { Chartkick })
 Include the charting library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.5.0/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chart.js@2.7.1/dist/Chart.bundle.js"></script>
 ```
 
 And then the Chartkick libraries
 
 ```html
-<script src="https://unpkg.com/chartkick@2.2.3"></script>
+<script src="https://unpkg.com/chartkick@2.2.4"></script>
 <script src="https://unpkg.com/vue-chartkick@0.2.0/dist/vue-chartkick.js"></script>
 ```
 
