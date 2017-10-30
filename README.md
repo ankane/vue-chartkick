@@ -216,7 +216,7 @@ import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Vue.use(VueChartkick, { Chartkick })
+Vue.use(VueChartkick, { Chartkick, Chart })
 ```
 
 ### Google Charts
