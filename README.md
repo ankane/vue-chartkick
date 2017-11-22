@@ -11,7 +11,7 @@ Supports [Chart.js](http://www.chartjs.org/), [Google Charts](https://developers
 Line chart
 
 ```vue
-<line-chart :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></line-chart>
+<line-chart :data="{'2017-01-01 00:00:00 -0800': 11, '2017-01-02 00:00:00 -0800': 6}"></line-chart>
 ```
 
 Pie chart
@@ -35,13 +35,13 @@ Bar chart
 Area chart
 
 ```vue
-<area-chart :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></area-chart>
+<area-chart :data="{'2017-01-01 00:00:00 -0800': 11, '2017-01-02 00:00:00 -0800': 6}"></area-chart>
 ```
 
 Scatter chart
 
 ```vue
-<scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6]]"></scatter-chart>
+<scatter-chart :data="[[174.0, 80.0], [176.5, 82.3]]" xtitle="Size" ytitle="Population"></scatter-chart>
 ```
 
 Geo chart - *Google Charts*
@@ -53,15 +53,15 @@ Geo chart - *Google Charts*
 Timeline - *Google Charts*
 
 ```vue
-<timeline :data="[['Washington', '1789-04-29', '1797-03-03'],['Adams', '1797-03-03', '1801-03-03']]"></timeline>
+<timeline :data="[['Washington', '1789-04-29', '1797-03-03'], ['Adams', '1797-03-03', '1801-03-03']]"></timeline>
 ```
 
 Multiple series
 
 ```vue
 data = [
-  {name: 'Workout', data: {'2013-02-10 00:00:00 -0800': 3, '2013-02-17 00:00:00 -0800': 4}},
-  {name: 'Call parents', data: {'2013-02-10 00:00:00 -0800': 5, '2013-02-17 00:00:00 -0800': 3}}
+  {name: 'Workout', data: {'2017-01-01 00:00:00 -0800': 3, '2017-01-02 00:00:00 -0800': 4}},
+  {name: 'Call parents', data: {'2017-01-01 00:00:00 -0800': 5, '2017-01-02 00:00:00 -0800': 3}}
 ];
 
 // and
@@ -119,7 +119,7 @@ Label (for single series)
 Axis titles
 
 ```vue
-<line-chart xtitle="Time" ytitle="Population"></line-chart>
+<line-chart xtitle="Size" ytitle="Population"></line-chart>
 ```
 
 Straight lines between points instead of a curve
@@ -172,7 +172,7 @@ Pass data as an array or object
 Times can be a `Date`, a timestamp, or a string (strings are parsed)
 
 ```vue
-<line-chart :data="[[new Date(), 5], [1368174456, 4], ['2013-05-07 00:00:00 UTC', 7]]"></line-chart>
+<line-chart :data="[[new Date(), 5], [1368174456, 4], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
 ```
 
 ### Download Charts
