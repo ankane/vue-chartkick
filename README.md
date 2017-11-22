@@ -119,7 +119,7 @@ Label (for single series)
 Axis titles
 
 ```vue
-<line-chart xtitle="Size" ytitle="Population"></line-chart>
+<line-chart xtitle="Time" ytitle="Population"></line-chart>
 ```
 
 Straight lines between points instead of a curve
