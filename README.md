@@ -11,7 +11,7 @@ Supports [Chart.js](http://www.chartjs.org/), [Google Charts](https://developers
 Line chart
 
 ```vue
-<line-chart :data="{'2017-01-01 00:00:00 -0800': 11, '2017-01-02 00:00:00 -0800': 6}"></line-chart>
+<line-chart :data="{'2017-01-01': 11, '2017-01-02': 6}"></line-chart>
 ```
 
 Pie chart
