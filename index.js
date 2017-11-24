@@ -1,6 +1,6 @@
 /*
  * Vue Chartkick
- * Create beautiful charts with one line in Vue.js
+ * Create beautiful JavaScript charts with one line of Vue
  * https://github.com/ankane/vue-chartkick
  * v0.2.0
  * @license MIT
