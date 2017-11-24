@@ -12,7 +12,7 @@
   "authors": [
     "Andrew Kane <andrew@chartkick.com>"
   ],
-  "description": "Create beautiful charts with one line in Vue.js",
+  "description": "Create beautiful JavaScript charts with one line of Vue",
   "keywords": [
     "charts"
   ],

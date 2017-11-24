@@ -1,8 +1,8 @@
 # Vue Chartkick
 
-Create beautiful charts with one line in Vue.js
+Create beautiful JavaScript charts with one line of Vue
 
-[See it in action](http://ankane.github.io/chartkick.js/examples/)
+[See it in action](https://www.chartkick.com/vue)
 
 Supports [Chart.js](http://www.chartjs.org/), [Google Charts](https://developers.google.com/chart/), and [Highcharts](http://www.highcharts.com/)
 
@@ -35,7 +35,7 @@ Bar chart
 Area chart
 
 ```vue
-<area-chart :data="{'2017-01-01 00:00:00 -0800': 11, '2017-01-02 00:00:00 -0800': 6}"></area-chart>
+<area-chart :data="{'2017-01-01': 11, '2017-01-02': 6}"></area-chart>
 ```
 
 Scatter chart
@@ -60,8 +60,8 @@ Multiple series
 
 ```vue
 data = [
-  {name: 'Workout', data: {'2017-01-01 00:00:00 -0800': 3, '2017-01-02 00:00:00 -0800': 4}},
-  {name: 'Call parents', data: {'2017-01-01 00:00:00 -0800': 5, '2017-01-02 00:00:00 -0800': 3}}
+  {name: 'Workout', data: {'2017-01-01': 3, '2017-01-02': 4}},
+  {name: 'Call parents', data: {'2017-01-01': 5, '2017-01-02': 3}}
 ];
 
 // and
