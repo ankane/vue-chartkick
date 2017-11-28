@@ -16,7 +16,18 @@ var createComponent = function(Vue, tagName, chartType) {
   ]
   Vue.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
-    template: '<div v-bind:id="chartId" v-bind:style="chartStyle">Loading...</div>',
+    render: function(createElement) {
+      return createElement(
+        "div",
+        {
+          attrs: {
+            id: this.chartId
+          },
+          style: this.chartStyle
+        },
+        ["Loading..."]
+      );
+    },
     data: function() {
       return {
         chartId: null
