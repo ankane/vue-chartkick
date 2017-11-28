@@ -1,3 +1,7 @@
+## 0.2.1 [unreleased]
+
+- Added support for runtime-only
+
 ## 0.2.0
 
 - Changed to Vue plugin
