@@ -146,6 +146,36 @@ Donut chart
 <pie-chart :donut="true"></pie-chart>
 ```
 
+Prefix, useful for currency - *Chart.js, Highcharts*
+
+```vue
+<line-chart prefix="$"></line-chart>
+```
+
+Suffix, useful for percentages - *Chart.js, Highcharts*
+
+```vue
+<line-chart suffix="%"></line-chart>
+```
+
+Set a thousands separator - *Chart.js, Highcharts*
+
+```vue
+<line-chart thousands=","></line-chart>
+```
+
+Set a decimal separator - *Chart.js, Highcharts*
+
+```vue
+<line-chart decimal=","></line-chart>
+```
+
+Show a message when data is empty
+
+```vue
+<line-chart :messages="{empty: "No data"}"></line-chart>
+```
+
 Refresh data from a remote source every `n` seconds
 
 ```vue
@@ -266,7 +296,7 @@ Include the charting library
 And then the Chartkick libraries
 
 ```html
-<script src="https://unpkg.com/chartkick@2.2.4"></script>
+<script src="https://unpkg.com/chartkick@2.3.0"></script>
 <script src="https://unpkg.com/vue-chartkick@0.2.0/dist/vue-chartkick.js"></script>
 ```
 
