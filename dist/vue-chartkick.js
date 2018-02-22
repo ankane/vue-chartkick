@@ -81,7 +81,7 @@ return /******/ (function(modules) { // webpackBootstrap
  * Vue Chartkick
  * Create beautiful JavaScript charts with one line of Vue
  * https://github.com/ankane/vue-chartkick
- * v0.2.0
+ * v0.2.1
  * @license MIT
  */
 
@@ -89,9 +89,9 @@ var chartId = 1
 
 var createComponent = function(Vue, tagName, chartType) {
   var chartProps = [
-    "colors", "curve", "discrete", "donut", "download", "label",
-    "legend", "library", "max", "min", "points", "refresh",
-    "stacked", "title", "xtitle", "xtype", "ytitle"
+    "colors", "curve", "decimal", "discrete", "donut", "download", "label",
+    "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
+    "stacked", "suffix", "thousands", "title", "xtitle", "xtype", "ytitle"
   ]
   Vue.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
@@ -153,7 +153,7 @@ var createComponent = function(Vue, tagName, chartType) {
 }
 
 var VueChartkick = {
-  version: "0.2.0",
+  version: "0.2.1",
   install: function(Vue, options) {
     var Chartkick = options.Chartkick
     createComponent(Vue, "line-chart", Chartkick.LineChart)

@@ -2,7 +2,7 @@
  * Vue Chartkick
  * Create beautiful JavaScript charts with one line of Vue
  * https://github.com/ankane/vue-chartkick
- * v0.2.0
+ * v0.2.1
  * @license MIT
  */
 
@@ -74,7 +74,7 @@ var createComponent = function(Vue, tagName, chartType) {
 }
 
 var VueChartkick = {
-  version: "0.2.0",
+  version: "0.2.1",
   install: function(Vue, options) {
     var Chartkick = options.Chartkick
     createComponent(Vue, "line-chart", Chartkick.LineChart)
