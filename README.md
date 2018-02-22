@@ -173,7 +173,7 @@ Set a decimal separator - *Chart.js, Highcharts*
 Show a message when data is empty
 
 ```vue
-<line-chart :messages="{empty: "No data"}"></line-chart>
+<line-chart :messages="{empty: 'No data'}"></line-chart>
 ```
 
 Refresh data from a remote source every `n` seconds
