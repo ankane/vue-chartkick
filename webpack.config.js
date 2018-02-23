@@ -3,13 +3,27 @@ var path = require("path")
 
 module.exports = {
   entry: {
-    "vue-chartkick": "./src/index.js",
-    "vue-chartkick.min": "./src/index.js"
+    "react-chartkick": "./src/index.js",
+    "react-chartkick.min": "./src/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     libraryTarget: "umd"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["env"]
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -18,7 +32,17 @@ module.exports = {
     })
   ],
   externals: {
-    "vue": "Vue",
-    "chartkick": "Chartkick"
+    vue: {
+      commonjs: "vue",
+      commonjs2: "vue",
+      amd: "vue",
+      root: "Vue"
+    },
+    chartkick: {
+      commonjs: "chartkick",
+      commonjs2: "chartkick",
+      amd: "chartkick",
+      root: "Chartkick"
+    }
   }
 }

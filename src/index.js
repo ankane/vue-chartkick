@@ -6,10 +6,10 @@
  * @license MIT
  */
 
-var chartId = 1
+let chartId = 1
 
-var createComponent = function(Vue, tagName, chartType) {
-  var chartProps = [
+let createComponent = function(Vue, tagName, chartType) {
+  let chartProps = [
     "colors", "curve", "decimal", "discrete", "donut", "download", "label",
     "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
     "stacked", "suffix", "thousands", "title", "xtitle", "xtype", "ytitle"
@@ -26,7 +26,7 @@ var createComponent = function(Vue, tagName, chartType) {
           style: this.chartStyle
         },
         ["Loading..."]
-      );
+      )
     },
     data: function() {
       return {
@@ -50,10 +50,10 @@ var createComponent = function(Vue, tagName, chartType) {
         }
       },
       chartOptions: function() {
-        var options = {}
-        var props = chartProps
-        for (var i = 0; i < props.length; i++) {
-          var prop = props[i]
+        let options = {}
+        let props = chartProps
+        for (let i = 0; i < props.length; i++) {
+          let prop = props[i]
           if (this[prop] !== undefined) {
             options[prop] = this[prop]
           }
@@ -73,10 +73,10 @@ var createComponent = function(Vue, tagName, chartType) {
   })
 }
 
-var VueChartkick = {
+const VueChartkick = {
   version: "0.2.1",
   install: function(Vue, options) {
-    var Chartkick = options.Chartkick
+    let Chartkick = options.Chartkick
     createComponent(Vue, "line-chart", Chartkick.LineChart)
     createComponent(Vue, "pie-chart", Chartkick.PieChart)
     createComponent(Vue, "column-chart", Chartkick.ColumnChart)
@@ -93,4 +93,4 @@ if (typeof window !== "undefined" && window.Vue && window.Chartkick) {
   window.Vue.use(VueChartkick, {Chartkick: window.Chartkick})
 }
 
-module.exports = VueChartkick
+export default VueChartkick
