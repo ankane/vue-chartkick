@@ -228,7 +228,7 @@ Set the filename
 Run
 
 ```sh
-npm install chartkick vue-chartkick --save
+yarn add chartkick vue-chartkick
 ```
 
 ### Chart.js
@@ -236,7 +236,7 @@ npm install chartkick vue-chartkick --save
 Run
 
 ```sh
-npm install chart.js --save
+yarn add chart.js
 ```
 
 And add
@@ -271,7 +271,7 @@ And include on the page
 Run
 
 ```sh
-npm install highcharts --save
+yarn add highcharts
 ```
 
 And add
@@ -285,7 +285,7 @@ window.Highcharts = Highcharts
 Vue.use(VueChartkick, { Chartkick })
 ```
 
-### Without NPM
+### Without Yarn or NPM
 
 Include the charting library
 
@@ -332,5 +332,5 @@ To get started with development, run:
 git clone https://github.com/ankane/vue-chartkick.git
 cd vue-chartkick
 yarn
-npm run build
+yarn build
 ```
