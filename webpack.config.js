@@ -3,8 +3,8 @@ var path = require("path")
 
 module.exports = {
   entry: {
-    "vue-chartkick": "./index.js",
-    "vue-chartkick.min": "./index.js"
+    "vue-chartkick": "./src/index.js",
+    "vue-chartkick.min": "./src/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),

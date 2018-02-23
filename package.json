@@ -18,6 +18,9 @@
     "type": "git",
     "url": "https://github.com/ankane/vue-chartkick"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "webpack": "^3.8.1"
   }
