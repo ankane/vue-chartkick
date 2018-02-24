@@ -254,7 +254,7 @@ Vue.use(VueChartkick, { Chartkick })
 Add
 
 ```es6
-import Chartkick from 'chartkick'
+import { Chartkick } from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 
 Vue.use(VueChartkick, { Chartkick })
@@ -277,7 +277,7 @@ yarn add highcharts
 And add
 
 ```es6
-import Chartkick from 'chartkick'
+import { Chartkick } from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
