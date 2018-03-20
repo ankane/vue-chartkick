@@ -246,7 +246,6 @@ import Vue from 'vue'
 import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 
-// Use the comment above to prevent http://eslint.org/docs/rules/no-unused-vars
 // eslint-disable-next-line
 import Chart from 'chart.js'
 
