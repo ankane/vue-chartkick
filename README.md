@@ -242,8 +242,11 @@ yarn add chart.js
 And add
 
 ```es6
+import Vue from 'vue'
 import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
+
+// eslint-disable-next-line
 import Chart from 'chart.js'
 
 Vue.use(VueChartkick, { Chartkick })
@@ -254,6 +257,7 @@ Vue.use(VueChartkick, { Chartkick })
 Add
 
 ```es6
+import Vue from 'vue'
 import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 
@@ -277,6 +281,7 @@ yarn add highcharts
 And add
 
 ```es6
+import Vue from 'vue'
 import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
