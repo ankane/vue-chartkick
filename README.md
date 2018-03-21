@@ -261,6 +261,8 @@ import Vue from 'vue'
 import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 
+window.Chartkick = Chartkick
+
 Vue.use(VueChartkick, { Chartkick })
 ```
 
