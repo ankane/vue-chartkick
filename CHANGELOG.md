@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Add module build
+
 ## 0.2.1
 
 - Added support for runtime-only

@@ -66,7 +66,7 @@ let createComponent = function(Vue, tagName, chartType) {
 }
 
 const VueChartkick = {
-  version: "0.2.1",
+  version: "0.2.2",
   install: function(Vue, options) {
     let Chartkick = options.Chartkick
     createComponent(Vue, "line-chart", Chartkick.LineChart)

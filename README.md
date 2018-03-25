@@ -304,7 +304,7 @@ And then the Chartkick libraries
 
 ```html
 <script src="https://unpkg.com/chartkick@2.3.3"></script>
-<script src="https://unpkg.com/vue-chartkick@0.2.1/dist/vue-chartkick.js"></script>
+<script src="https://unpkg.com/vue-chartkick@0.2.2/dist/vue-chartkick.js"></script>
 ```
 
 ## Example
