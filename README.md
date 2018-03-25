@@ -231,6 +231,8 @@ Run
 yarn add chartkick vue-chartkick
 ```
 
+Next, choose your charting library.
+
 ### Chart.js
 
 Run

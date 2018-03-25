@@ -1,11 +1,3 @@
-/*
- * Vue Chartkick
- * Create beautiful JavaScript charts with one line of Vue
- * https://github.com/ankane/vue-chartkick
- * v0.2.1
- * @license MIT
- */
-
 let chartId = 1
 
 let createComponent = function(Vue, tagName, chartType) {
