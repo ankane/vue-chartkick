@@ -1,6 +1,6 @@
 {
   "name": "vue-chartkick",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Create beautiful JavaScript charts with one line of Vue",
   "main": "dist/vue-chartkick.js",
   "module": "dist/vue-chartkick.esm.js",
@@ -31,6 +31,6 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "dependencies": {
-    "chartkick": "file:/Users/andrew/open_source/chartkick.js"
+    "chartkick": "^2.3.5"
   }
 }
