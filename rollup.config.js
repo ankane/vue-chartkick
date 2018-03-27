@@ -9,7 +9,6 @@ const outputName = "VueChartkick";
 const external = Object.keys(pkg.peerDependencies || {});
 const esExternal = external.concat(Object.keys(pkg.dependencies || {}));
 const globals = {
-  chartkick: "Chartkick",
   vue: "Vue"
 };
 const banner =

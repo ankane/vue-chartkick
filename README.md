@@ -225,45 +225,39 @@ Set the filename
 
 ## Installation
 
-Run
-
-```sh
-yarn add chartkick vue-chartkick
-```
-
-Next, choose your charting library.
-
 ### Chart.js
 
 Run
 
 ```sh
-yarn add chart.js
+yarn add vue-chartkick chart.js
 ```
 
 And add
 
 ```es6
 import Vue from 'vue'
-import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
-
-// eslint-disable-next-line
 import Chart from 'chart.js'
 
-Vue.use(VueChartkick, { Chartkick })
+Vue.use(VueChartkick, {adapter: Chart})
 ```
 
 ### Google Charts
 
-Add
+Run
+
+```sh
+yarn add vue-chartkick
+```
+
+And add
 
 ```es6
 import Vue from 'vue'
-import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 
-Vue.use(VueChartkick, { Chartkick })
+Vue.use(VueChartkick)
 ```
 
 And include on the page
@@ -277,34 +271,26 @@ And include on the page
 Run
 
 ```sh
-yarn add highcharts
+yarn add vue-chartkick highcharts
 ```
 
 And add
 
 ```es6
 import Vue from 'vue'
-import Chartkick from 'chartkick'
 import VueChartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-window.Highcharts = Highcharts
-Vue.use(VueChartkick, { Chartkick })
+Vue.use(VueChartkick, {adapter: Highcharts})
 ```
 
-### Without Yarn or NPM
+### No Package Manager
 
-Include the charting library
-
-```html
-<script src="https://unpkg.com/chart.js@2.7.1/dist/Chart.bundle.js"></script>
-```
-
-And then the Chartkick libraries
+Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chartkick@2.3.4"></script>
-<script src="https://unpkg.com/vue-chartkick@0.2.2"></script>
+<script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/vue-chartkick@0.3.0"></script>
 ```
 
 ## Example
