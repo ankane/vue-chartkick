@@ -1,3 +1,7 @@
+## 0.3.1 [unreleased]
+
+- Fixed error when no options passed
+
 ## 0.3.0
 
 - Moved `chartkick` to a dependency from a peer dependency
