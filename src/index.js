@@ -61,8 +61,13 @@ let createComponent = function(Vue, tagName, chartType) {
     mounted: function() {
       this.chart = new chartType(this.chartId, this.data, this.chartOptions)
     },
-    updated: function() {
-      this.chart.updateData(this.data, this.chartOptions)
+    watch: {
+      data: {
+        handler: function() {
+          this.chart.updateData(this.data, this.chartOptions)
+        },
+        deep: true
+      }
     }
   })
 }
