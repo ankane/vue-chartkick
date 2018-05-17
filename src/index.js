@@ -62,11 +62,8 @@ let createComponent = function(Vue, tagName, chartType) {
       this.chart = new chartType(this.chartId, this.data, this.chartOptions)
     },
     watch: {
-      data: {
-        handler: function() {
-          this.chart.updateData(this.data, this.chartOptions)
-        },
-        deep: true
+      data: function() {
+        this.chart.updateData(this.data, this.chartOptions)
       }
     }
   })
