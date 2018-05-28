@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <title>Vue Chartkick</title>
 
-    <script src="https://unpkg.com/vue@2.5.9/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.min.js"></script>
     <script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.min.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../dist/vue-chartkick.js"></script>
   </head>
   <body>
     <div id="app">
-      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$"></line-chart>
+      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="{animation: {duration: 1000}}"></line-chart>
       <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
       <area-chart :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></area-chart>
       <scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6]]"></scatter-chart>
       <geo-chart :data="[['United States', 44], ['Germany', 23], ['Brazil', 22]]"></geo-chart>
+      {{count}}
     </div>
 
     <script>
@@ -25,13 +26,17 @@
         el: "#app",
         data: {
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
-          max: 10
+          max: 10,
+          count: 0
         },
         mounted: function() {
           setTimeout(() => {
             this.data = this.data.concat([["Aug", 10]])
             this.max = this.max += 5
           }, 2000)
+          setInterval(() => {
+            this.count += 1
+          }, 1000)
         }
       })
     </script>
