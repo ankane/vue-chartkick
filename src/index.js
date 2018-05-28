@@ -56,12 +56,12 @@ let createComponent = function(Vue, tagName, chartType) {
       }
     },
     created: function() {
-      this.chartId = this.chartId || this.id || ("chart-" + chartId++);
+      this.chartId = this.chartId || this.id || ("chart-" + chartId++)
       ['data'].concat(chartProps).forEach((property) => {
         this.$watch(property, function () {
-          this.chart.updateData(this.data, this.chartOptions);
-        }, { deep: true });
-      });
+          this.chart.updateData(this.data, this.chartOptions)
+        }, { deep: true })
+      })
     },
     mounted: function() {
       this.chart = new chartType(this.chartId, this.data, this.chartOptions)
