@@ -57,12 +57,15 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     created: function() {
       this.chartId = this.chartId || this.id || ("chart-" + chartId++)
+      const props = ['data'].concat(chartProps)
+      props.forEach((property) => {
+        this.$watch(property, function () {
+          this.chart.updateData(this.data, this.chartOptions)
+        }, { deep: true })
+      })
     },
     mounted: function() {
       this.chart = new chartType(this.chartId, this.data, this.chartOptions)
-    },
-    updated: function() {
-      this.chart.updateData(this.data, this.chartOptions)
     }
   })
 }
