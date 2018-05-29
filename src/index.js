@@ -57,7 +57,8 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     created: function() {
       this.chartId = this.chartId || this.id || ("chart-" + chartId++)
-      ['data'].concat(chartProps).forEach((property) => {
+      let props = ['data'].concat(chartProps)
+      props.forEach((property) => {
         this.$watch(property, function () {
           this.chart.updateData(this.data, this.chartOptions)
         }, { deep: true })
