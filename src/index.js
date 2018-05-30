@@ -1,4 +1,5 @@
 import Chartkick from 'chartkick'
+import deepEqual from 'deep-equal'
 
 let chartId = 1
 
@@ -60,12 +61,30 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     mounted: function() {
       this.chart = new chartType(this.chartId, this.data, this.chartOptions)
+      this.savedState = this.currentState()
     },
     updated: function() {
-      this.chart.updateData(this.data, this.chartOptions)
+      // avoid updates when literal objects are used as props
+      // see https://github.com/ankane/vue-chartkick/pull/52
+      // and https://github.com/vuejs/vue/issues/4060
+      let currentState = this.currentState()
+      if (!deepEqual(currentState, this.savedState)) {
+        this.chart.updateData(this.data, this.chartOptions)
+        this.savedState = currentState
+      }
     },
     beforeDestroy: function() {
-      this.chart.destroy()
+      if (this.chart) {
+        this.chart.destroy()
+      }
+    },
+    methods: {
+      currentState: function() {
+        return {
+          data: this.data,
+          chartOptions: this.chartOptions
+        }
+      }
     }
   })
 }

@@ -1,5 +1,6 @@
 ## 0.3.2 [unreleased]
 
+- Fixed unnecessary re-renders for literal props
 - Destroy chart when component is destroyed
 
 ## 0.3.1
