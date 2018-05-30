@@ -1,3 +1,7 @@
+## 0.3.2 [unreleased]
+
+- Destroy chart when component is destroyed
+
 ## 0.3.1
 
 - Fixed error when no options passed
