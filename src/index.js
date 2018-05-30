@@ -63,6 +63,9 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     updated: function() {
       this.chart.updateData(this.data, this.chartOptions)
+    },
+    beforeDestroy: function() {
+      this.chart.destroy()
     }
   })
 }
