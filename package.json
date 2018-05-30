@@ -1,6 +1,6 @@
 {
   "name": "vue-chartkick",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Create beautiful JavaScript charts with one line of Vue",
   "main": "dist/vue-chartkick.js",
   "module": "dist/vue-chartkick.esm.js",
