@@ -192,7 +192,7 @@ See the documentation for [Google Charts](https://developers.google.com/chart/in
 
 To customize datasets in Chart.js, use: [master]
 
-``vue
+```vue
 <line-chart :dataset="{borderWidth: 10}"></line-chart>
 ```
 
