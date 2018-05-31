@@ -5,7 +5,7 @@ let chartId = 1
 
 let createComponent = function(Vue, tagName, chartType) {
   let chartProps = [
-    "colors", "curve", "decimal", "discrete", "donut", "download", "label",
+    "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
     "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
     "stacked", "suffix", "thousands", "title", "xtitle", "xtype", "ytitle"
   ]

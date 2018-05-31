@@ -1,3 +1,7 @@
+## 0.3.4 [unreleased]
+
+- Added `dataset` option
+
 ## 0.3.3
 
 - Fixed error with chart destroy
