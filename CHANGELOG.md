@@ -1,3 +1,7 @@
+## 0.3.3 [unreleased]
+
+- Fixed error with chart destroy
+
 ## 0.3.2
 
 - Fixed unnecessary re-renders for literal props
