@@ -12,7 +12,7 @@
   <body>
     <div id="app">
       <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="{animation: {duration: 1000}}"></line-chart>
-      <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true"></pie-chart>
+      <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true" :library="library"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
       <area-chart :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></area-chart>
@@ -27,7 +27,8 @@
         data: {
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
           max: 10,
-          count: 0
+          count: 0,
+          library: {animation: {duration: 1000}}
         },
         mounted: function() {
           setTimeout(() => {

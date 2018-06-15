@@ -1,5 +1,6 @@
 import Chartkick from 'chartkick'
 import deepEqual from 'deep-equal'
+import deepMerge from 'deepmerge'
 
 let chartId = 1
 
@@ -80,10 +81,10 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     methods: {
       currentState: function() {
-        return {
+        return deepMerge({}, {
           data: this.data,
           chartOptions: this.chartOptions
-        }
+        })
       }
     }
   })

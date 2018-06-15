@@ -1,6 +1,7 @@
 ## 0.3.4 [unreleased]
 
 - Added `dataset` option
+- Fixed prop reactivity for nested objects
 
 ## 0.3.3
 
