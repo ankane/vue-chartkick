@@ -61,7 +61,7 @@ let createComponent = function(Vue, tagName, chartType) {
       this.chartId = this.chartId || this.id || ("chart-" + chartId++)
     },
     mounted: function() {
-      this.chart = new chartType(this.chartId, this.data, this.chartOptions)
+      this.updateChart()
       this.savedState = this.currentState()
     },
     updated: function() {
@@ -70,7 +70,7 @@ let createComponent = function(Vue, tagName, chartType) {
       // and https://github.com/vuejs/vue/issues/4060
       let currentState = this.currentState()
       if (!deepEqual(currentState, this.savedState)) {
-        this.chart.updateData(this.data, this.chartOptions)
+        this.updateChart()
         this.savedState = currentState
       }
     },
@@ -80,6 +80,19 @@ let createComponent = function(Vue, tagName, chartType) {
       }
     },
     methods: {
+      updateChart: function() {
+        if (this.data !== null) {
+          if (this.chart) {
+            this.chart.updateData(this.data, this.chartOptions)
+          } else {
+            this.chart = new chartType(this.chartId, this.data, this.chartOptions)
+          }
+        } else if (this.chart) {
+          this.chart.destroy()
+          this.chart = null
+          this.$el.innerText = "Loading..."
+        }
+      },
       currentState: function() {
         return deepMerge({}, {
           data: this.data,

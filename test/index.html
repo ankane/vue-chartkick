@@ -18,6 +18,7 @@
       <area-chart :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></area-chart>
       <scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6]]"></scatter-chart>
       <geo-chart :data="[['United States', 44], ['Germany', 23], ['Brazil', 22]]"></geo-chart>
+      <line-chart :data="noData"></line-chart>
       {{count}}
     </div>
 
@@ -28,7 +29,8 @@
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
           max: 10,
           count: 0,
-          library: {animation: {duration: 1000}}
+          library: {animation: {duration: 1000}},
+          noData: null
         },
         mounted: function() {
           setTimeout(() => {

@@ -1,7 +1,8 @@
-## 0.3.4 [unreleased]
+## 0.4.0 [unreleased]
 
 - Added `dataset` option
 - Fixed prop reactivity for nested objects
+- Show loading when data is null
 
 ## 0.3.3
 
