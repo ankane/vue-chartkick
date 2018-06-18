@@ -1,4 +1,4 @@
-## 0.4.0 [unreleased]
+## 0.4.0
 
 - Added `dataset` option
 - Fixed prop reactivity for nested objects

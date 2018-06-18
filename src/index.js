@@ -104,7 +104,7 @@ let createComponent = function(Vue, tagName, chartType) {
 }
 
 const VueChartkick = {
-  version: "0.3.3",
+  version: "0.4.0",
   install: function(Vue, options) {
     if (options && options.adapter) {
       Chartkick.addAdapter(options.adapter)
