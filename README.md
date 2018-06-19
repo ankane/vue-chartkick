@@ -190,7 +190,7 @@ You can pass options directly to the charting library with:
 
 See the documentation for [Google Charts](https://developers.google.com/chart/interactive/docs/gallery), [Highcharts](https://api.highcharts.com/highcharts), and [Chart.js](https://www.chartjs.org/docs/) for more info.
 
-To customize datasets in Chart.js, use: [master]
+To customize datasets in Chart.js, use:
 
 ```vue
 <line-chart :dataset="{borderWidth: 10}"></line-chart>
