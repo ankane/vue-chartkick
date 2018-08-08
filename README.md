@@ -198,6 +198,12 @@ To customize datasets in Chart.js, use:
 
 You can pass this option to individual series as well.
 
+Use [dynamic components](https://vuejs.org/v2/guide/components.html#Dynamic-Components) to make the chart type dynamic:
+
+```vue
+<component is="column-chart"></component>
+```
+
 ### Data
 
 Pass data as an array or object
