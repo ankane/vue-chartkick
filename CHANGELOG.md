@@ -1,4 +1,4 @@
-## 0.5.0 [unreleased]
+## 0.5.0
 
 - Updated Chartkick.js to 3.0.0
 - Removed `xtype` option
