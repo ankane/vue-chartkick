@@ -31,7 +31,7 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "dependencies": {
-    "chartkick": "^2.3.6",
+    "chartkick": "^3.0.0",
     "deep-equal": "^1.0.1",
     "deepmerge": "^2.1.1"
   }
