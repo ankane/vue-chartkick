@@ -213,10 +213,10 @@ Pass data as an array or object
 <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]"></pie-chart>
 ```
 
-Times can be a `Date`, a timestamp, or a string (strings are parsed)
+Times can be a `Date` or a string (strings are parsed)
 
 ```vue
-<line-chart :data="[[new Date(), 5], [1368174456, 4], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
+<line-chart :data="[[new Date(), 5], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
 ```
 
 ### Download Charts
