@@ -219,6 +219,15 @@ Times can be a `Date` or a string (strings are parsed)
 <line-chart :data="[[new Date(), 5], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
 ```
 
+### Multiple Series
+
+You can pass a few options with a series:
+
+- `name`
+- `data`
+- `color`
+- `dataset` - *Chart.js only*
+
 ### Download Charts
 
 *Chart.js only*
