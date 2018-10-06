@@ -316,6 +316,16 @@ Include the charting library and the Chartkick library
 <script src="https://unpkg.com/vue-chartkick@0.5.0"></script>
 ```
 
+### Multiple Libraries [master]
+
+If more than one charting library is loaded, choose between them with:
+
+```javascript
+<line-chart adapter="google"></line-chart>
+```
+
+Options are `google`, `highcharts`, and `chartjs`
+
 ## Example
 
 ```vue

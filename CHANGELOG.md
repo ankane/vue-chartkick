@@ -1,3 +1,7 @@
+## 0.5.1 [unreleased]
+
+- Added `adapter` option
+
 ## 0.5.0
 
 - Updated Chartkick.js to 3.0.0
