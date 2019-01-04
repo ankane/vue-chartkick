@@ -6,6 +6,26 @@ Create beautiful JavaScript charts with one line of Vue
 
 Supports [Chart.js](https://www.chartjs.org/), [Google Charts](https://developers.google.com/chart/), and [Highcharts](https://www.highcharts.com/)
 
+## Quick Start
+
+Run
+
+```sh
+yarn add vue-chartkick chart.js
+```
+
+And add
+
+```es6
+import Vue from 'vue'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(VueChartkick, {adapter: Chart})
+```
+
+This sets up Chartkick with Chart.js. For other charting libaries, see [detailed instructions](#installation).
+
 ## Charts
 
 Line chart
