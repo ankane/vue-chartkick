@@ -24,7 +24,7 @@ import Chart from 'chart.js'
 Vue.use(VueChartkick, {adapter: Chart})
 ```
 
-This sets up Chartkick with Chart.js. For other charting libaries, see [detailed instructions](#installation).
+This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
 
 ## Charts
 
