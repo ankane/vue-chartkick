@@ -13,6 +13,11 @@ Run
 ```sh
 yarn add vue-chartkick chart.js
 ```
+If using NPM, then
+
+```sh
+  npm install vue-chartkick chart.js
+```
 
 And add
 
@@ -274,6 +279,11 @@ Run
 
 ```sh
 yarn add vue-chartkick chart.js
+```
+If using NPM, then
+
+```sh
+  npm install vue-chartkick chart.js
 ```
 
 And add
