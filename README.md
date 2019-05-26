@@ -21,8 +21,7 @@ import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Chartkick.use(Chart)
-Vue.use(Chartkick)
+Vue.use(Chartkick.use(Chart))
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -308,8 +307,7 @@ import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Chartkick.use(Chart)
-Vue.use(Chartkick)
+Vue.use(Chartkick.use(Chart))
 ```
 
 ### Google Charts
@@ -356,8 +354,7 @@ import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-Chartkick.use(Highcharts)
-Vue.use(Chartkick)
+Vue.use(Chartkick.use(Highcharts))
 ```
 
 ### No Package Manager
