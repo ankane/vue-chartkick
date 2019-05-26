@@ -272,6 +272,12 @@ Set the filename
 
 **Note:** Safari will open the image in a new window instead of downloading.
 
+Set the background color
+
+```vue
+<line-chart :download="{background: '#fff'}"></line-chart>
+```
+
 ## Installation
 
 ### Chart.js

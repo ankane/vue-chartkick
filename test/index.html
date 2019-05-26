@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="app">
-      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="{animation: {duration: 1000}}"></line-chart>
+      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="{animation: {duration: 1000}}" :download="{background: '#000'}"></line-chart>
       <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true" :library="library"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
