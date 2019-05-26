@@ -370,7 +370,7 @@ Include the charting library and the Chartkick library
 
 If more than one charting library is loaded, choose between them with:
 
-```javascript
+```vue
 <line-chart adapter="google"></line-chart>
 ```
 
