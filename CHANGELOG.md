@@ -2,6 +2,7 @@
 
 - Added `use` function
 - Added `adapter` option
+- Added `xmin` and `xmax` options
 - Updated Chartkick.js to 3.1.0
 
 ## 0.5.0

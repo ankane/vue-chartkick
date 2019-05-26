@@ -112,6 +112,12 @@ Min and max values
 
 `min` defaults to 0 for charts with non-negative values. Use `null` to let the charting library decide.
 
+Min and max for x-axis - *Chart.js*
+
+```vue
+<line-chart xmin="2018-01-01" xmax="2019-01-01"></line-chart>
+```
+
 Colors
 
 ```vue
