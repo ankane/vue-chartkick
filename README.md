@@ -16,12 +16,12 @@ yarn add vue-chartkick chart.js
 
 And add
 
-```es6
+```javascript
 import Vue from 'vue'
-import VueChartkick from 'vue-chartkick'
-import Chart from 'chart.js'
+import Chartkick from 'vue-chartkick'
+import 'chart.js'
 
-Vue.use(VueChartkick, {adapter: Chart})
+Vue.use(Chartkick)
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -278,12 +278,12 @@ yarn add vue-chartkick chart.js
 
 And add
 
-```es6
+```javascript
 import Vue from 'vue'
-import VueChartkick from 'vue-chartkick'
-import Chart from 'chart.js'
+import Chartkick from 'vue-chartkick'
+import 'chart.js'
 
-Vue.use(VueChartkick, {adapter: Chart})
+Vue.use(Chartkick)
 ```
 
 ### Google Charts
@@ -296,17 +296,23 @@ yarn add vue-chartkick
 
 And add
 
-```es6
+```javascript
 import Vue from 'vue'
-import VueChartkick from 'vue-chartkick'
+import Chartkick from 'vue-chartkick'
 
-Vue.use(VueChartkick)
+Vue.use(Chartkick)
 ```
 
 And include on the page
 
 ```html
 <script src="https://www.gstatic.com/charts/loader.js"></script>
+```
+
+To specify a language or Google Maps API key, use:
+
+```javascript
+Chartkick.configure({language: "de", mapsApiKey: "..."})
 ```
 
 ### Highcharts
@@ -319,12 +325,13 @@ yarn add vue-chartkick highcharts
 
 And add
 
-```es6
+```javascript
 import Vue from 'vue'
-import VueChartkick from 'vue-chartkick'
+import Chartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-Vue.use(VueChartkick, {adapter: Highcharts})
+Chartkick.use(Highcharts)
+Vue.use(Chartkick)
 ```
 
 ### No Package Manager
@@ -332,7 +339,7 @@ Vue.use(VueChartkick, {adapter: Highcharts})
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
 <script src="https://unpkg.com/vue-chartkick@0.5.0"></script>
 ```
 

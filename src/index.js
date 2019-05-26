@@ -103,25 +103,22 @@ let createComponent = function(Vue, tagName, chartType) {
   })
 }
 
-const VueChartkick = {
-  version: "0.5.0",
-  install: function(Vue, options) {
-    if (options && options.adapter) {
-      Chartkick.addAdapter(options.adapter)
-    }
-    createComponent(Vue, "line-chart", Chartkick.LineChart)
-    createComponent(Vue, "pie-chart", Chartkick.PieChart)
-    createComponent(Vue, "column-chart", Chartkick.ColumnChart)
-    createComponent(Vue, "bar-chart", Chartkick.BarChart)
-    createComponent(Vue, "area-chart", Chartkick.AreaChart)
-    createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
-    createComponent(Vue, "geo-chart", Chartkick.GeoChart)
-    createComponent(Vue, "timeline", Chartkick.Timeline)
-  },
-  addAdapter: function(library) {
-    Chartkick.addAdapter(library)
+Chartkick.version = "0.5.0"
+Chartkick.install = function(Vue, options) {
+  if (options && options.adapter) {
+    Chartkick.addAdapter(options.adapter)
   }
+  createComponent(Vue, "line-chart", Chartkick.LineChart)
+  createComponent(Vue, "pie-chart", Chartkick.PieChart)
+  createComponent(Vue, "column-chart", Chartkick.ColumnChart)
+  createComponent(Vue, "bar-chart", Chartkick.BarChart)
+  createComponent(Vue, "area-chart", Chartkick.AreaChart)
+  createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
+  createComponent(Vue, "geo-chart", Chartkick.GeoChart)
+  createComponent(Vue, "timeline", Chartkick.Timeline)
 }
+
+const VueChartkick = Chartkick
 
 // in browser
 if (typeof window !== "undefined" && window.Vue) {

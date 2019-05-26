@@ -1,5 +1,6 @@
 ## 0.5.1 [unreleased]
 
+- Added `use` function
 - Added `adapter` option
 
 ## 0.5.0
