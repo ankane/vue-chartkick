@@ -230,6 +230,16 @@ Use [dynamic components](https://vuejs.org/v2/guide/components.html#Dynamic-Comp
 <component is="column-chart"></component>
 ```
 
+### Global Options
+
+To set options for all of your charts, use:
+
+```javascript
+Chartkick.options = {
+  colors: ["#b00", "#666"]
+}
+```
+
 ### Data
 
 Pass data as an array or object
