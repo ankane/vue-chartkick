@@ -19,8 +19,9 @@ And add
 ```javascript
 import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
-import 'chart.js'
+import Chart from 'chart.js'
 
+Chartkick.use(Chart)
 Vue.use(Chartkick)
 ```
 
@@ -305,8 +306,9 @@ And add
 ```javascript
 import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
-import 'chart.js'
+import Chart from 'chart.js'
 
+Chartkick.use(Chart)
 Vue.use(Chartkick)
 ```
 
