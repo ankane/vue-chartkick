@@ -1,3 +1,7 @@
+## 0.5.2 [unreleased]
+
+- Updated Chartkick.js to 3.1.1
+
 ## 0.5.1
 
 - Added `use` function
