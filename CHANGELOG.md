@@ -1,4 +1,4 @@
-## 0.5.2 [unreleased]
+## 0.5.2
 
 - Updated Chartkick.js to 3.1.1
 
