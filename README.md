@@ -255,6 +255,17 @@ Times can be a `Date` or a string (strings are parsed)
 <line-chart :data="[[new Date(), 5], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
 ```
 
+Data can also be a callback
+
+```vue
+function fetchData(success, fail) {
+  success({"Blueberry": 44, "Strawberry": 23})
+  // or fail("Data not available")
+}
+
+<pie-chart :data="fetchData" />
+```
+
 ### Multiple Series
 
 You can pass a few options with a series:
@@ -362,8 +373,8 @@ Vue.use(Chartkick.use(Highcharts))
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/vue-chartkick@0.5.2"></script>
+<script src="https://unpkg.com/chart.js@2.9.1/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/vue-chartkick@0.5.3"></script>
 ```
 
 ### Multiple Libraries

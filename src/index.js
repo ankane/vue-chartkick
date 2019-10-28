@@ -103,7 +103,7 @@ let createComponent = function(Vue, tagName, chartType) {
   })
 }
 
-Chartkick.version = "0.5.2" // TODO remove in future versions
+Chartkick.version = "0.5.3" // TODO remove in future versions
 Chartkick.install = function(Vue, options) {
   if (options && options.adapter) {
     Chartkick.addAdapter(options.adapter)
