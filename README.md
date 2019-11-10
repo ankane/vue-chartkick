@@ -196,6 +196,30 @@ Set a decimal separator - *Chart.js, Highcharts*
 <line-chart decimal=","></line-chart>
 ```
 
+Set significant digits - *Chart.js, Highcharts*
+
+```vue
+<line-chart :precision="3"></line-chart>
+```
+
+Set rounding - *Chart.js, Highcharts*
+
+```vue
+<line-chart :round="2"></line-chart>
+```
+
+Show insignificant zeros, useful for currency - *Chart.js, Highcharts*
+
+```vue
+<line-chart :round="2" :zeros="true"></line-chart>
+```
+
+Friendly file sizes - *Chart.js 2.8+*
+
+```vue
+<line-chart :bytes="true"></line-chart>
+```
+
 Show a message when data is empty
 
 ```vue

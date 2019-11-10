@@ -6,9 +6,9 @@ let chartId = 1
 
 let createComponent = function(Vue, tagName, chartType) {
   let chartProps = [
-    "adapter", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
-    "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
-    "stacked", "suffix", "thousands", "title", "xmax", "xmin", "xtitle", "ytitle"
+    "adapter", "bytes", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
+    "legend", "library", "max", "messages", "min", "points", "precision", "prefix", "refresh",
+    "round", "stacked", "suffix", "thousands", "title", "xmax", "xmin", "xtitle", "ytitle", "zeros"
   ]
   Vue.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
