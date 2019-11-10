@@ -397,8 +397,8 @@ Vue.use(Chartkick.use(Highcharts))
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.9.1/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/vue-chartkick@0.5.3"></script>
+<script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/vue-chartkick@0.6.0"></script>
 ```
 
 ### Multiple Libraries
