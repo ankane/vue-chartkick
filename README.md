@@ -214,7 +214,7 @@ Show insignificant zeros, useful for currency - *Chart.js, Highcharts*
 <line-chart :round="2" :zeros="true"></line-chart>
 ```
 
-Friendly file sizes - *Chart.js 2.8+*
+Friendly byte sizes - *Chart.js 2.8+*
 
 ```vue
 <line-chart :bytes="true"></line-chart>
