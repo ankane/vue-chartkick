@@ -114,6 +114,7 @@ Chartkick.install = function(Vue, options) {
   createComponent(Vue, "bar-chart", Chartkick.BarChart)
   createComponent(Vue, "area-chart", Chartkick.AreaChart)
   createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
+  createComponent(Vue, "bubble-chart", Chartkick.BubbleChart)
   createComponent(Vue, "geo-chart", Chartkick.GeoChart)
   createComponent(Vue, "timeline", Chartkick.Timeline)
 }
