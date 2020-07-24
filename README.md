@@ -398,7 +398,7 @@ Include the charting library and the Chartkick library
 
 ```html
 <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/vue-chartkick@0.6.0"></script>
+<script src="https://unpkg.com/vue-chartkick@0.6.1"></script>
 ```
 
 ### Multiple Libraries

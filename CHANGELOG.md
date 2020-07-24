@@ -1,6 +1,7 @@
-## 0.6.1 (unreleased)
+## 0.6.1 (2020-07-23)
 
 - Added `code` option
+- Updated Chartkick.js to 3.2.1
 
 ## 0.6.0 (2019-11-09)
 
