@@ -345,6 +345,21 @@ import Chart from 'chart.js'
 Vue.use(Chartkick.use(Chart))
 ```
 
+### Nuxt
+Plugins add vue-chartkick.js
+
+```
+import Vue from 'vue'
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(Chartkick.use(Chart))
+```
+
+nuxt.config.js add  
+
+```plugins: [ { src: '~/plugins/vue-chartkick', ssr: false } ]```
+
 ### Google Charts
 
 Run
