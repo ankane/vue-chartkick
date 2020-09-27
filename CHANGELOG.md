@@ -1,3 +1,9 @@
+## 0.7.0 (unreleased)
+
+- Added support for Vue 3
+- Removed support for Vue 2
+- Removed dependencies
+
 ## 0.6.1 (2020-07-23)
 
 - Added `code` option
