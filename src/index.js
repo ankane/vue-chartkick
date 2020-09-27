@@ -1,6 +1,5 @@
 import Chartkick from 'chartkick'
-import deepEqual from 'deep-equal'
-import deepMerge from 'deepmerge'
+import { h } from 'vue'
 
 let chartId = 1
 
@@ -12,13 +11,11 @@ let createComponent = function(Vue, tagName, chartType) {
   ]
   Vue.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
-    render: function(createElement) {
-      return createElement(
+    render: function() {
+      return h(
         "div",
         {
-          attrs: {
-            id: this.chartId
-          },
+          id: this.chartId,
           style: this.chartStyle
         },
         ["Loading..."]
@@ -62,19 +59,11 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     mounted: function() {
       this.updateChart()
-      this.savedState = this.currentState()
     },
     updated: function() {
-      // avoid updates when literal objects are used as props
-      // see https://github.com/ankane/vue-chartkick/pull/52
-      // and https://github.com/vuejs/vue/issues/4060
-      let currentState = this.currentState()
-      if (!deepEqual(currentState, this.savedState)) {
-        this.updateChart()
-        this.savedState = currentState
-      }
+      this.updateChart()
     },
-    beforeDestroy: function() {
+    beforeUnmount: function() {
       if (this.chart) {
         this.chart.destroy()
       }
@@ -92,18 +81,11 @@ let createComponent = function(Vue, tagName, chartType) {
           this.chart = null
           this.$el.innerText = "Loading..."
         }
-      },
-      currentState: function() {
-        return deepMerge({}, {
-          data: this.data,
-          chartOptions: this.chartOptions
-        })
       }
     }
   })
 }
 
-Chartkick.version = "0.6.1" // TODO remove in future versions
 Chartkick.install = function(Vue, options) {
   if (options && options.adapter) {
     Chartkick.addAdapter(options.adapter)
@@ -121,7 +103,7 @@ Chartkick.install = function(Vue, options) {
 const VueChartkick = Chartkick
 
 // in browser
-if (typeof window !== "undefined" && window.Vue) {
+if (typeof window !== "undefined" && window.Vue && window.Vue.use) {
   window.Vue.use(VueChartkick)
 }
 

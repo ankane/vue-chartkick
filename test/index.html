@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <title>Vue Chartkick</title>
 
-    <script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../dist/vue-chartkick.js"></script>
   </head>
   <body>
     <div id="app">
-      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="{animation: {duration: 1000}}" :download="{background: '#000'}"></line-chart>
+      <line-chart :data="data" :max="max" legend="bottom" :curve="false" prefix="$" :library="hi"></line-chart>
       <pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]" :download="true" :library="library"></pie-chart>
       <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
       <bar-chart :data="[['Work', 32], ['Play', 1492]]"></bar-chart>
@@ -24,14 +25,16 @@
     </div>
 
     <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
-          max: 10,
-          count: 0,
-          library: {animation: {duration: 1000}},
-          noData: null
+      var app = Vue.createApp({
+        data: function() {
+          return {
+            data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3], ["Jun", 8], ["Jul", 4]],
+            max: 10,
+            count: 0,
+            library: {animation: {duration: 1000}},
+            noData: null,
+            hi: {animation: {duration: 1000}}
+          }
         },
         mounted: function() {
           setTimeout(() => {
@@ -43,6 +46,8 @@
           }, 1000)
         }
       })
+      app.use(VueChartkick)
+      app.mount("#app")
     </script>
   </body>
 </html>

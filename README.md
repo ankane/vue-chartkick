@@ -325,6 +325,22 @@ Set the background color
 <line-chart :download="{background: '#fff'}"></line-chart>
 ```
 
+## Reactivity
+
+In Vue, passing object or array literals to props can lead to unnecessary re-renders.
+
+```vue
+<line-chart :library="{backgroundColor: '#eee'}"></line-chart>
+```
+
+Instead, use a variable.
+
+```vue
+<line-chart :library="library"></line-chart>
+```
+
+See [this discussion](https://github.com/vuejs/vue/issues/4060) for more details.
+
 ## Installation
 
 ### Chart.js
@@ -397,7 +413,8 @@ Vue.use(Chartkick.use(Highcharts))
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
 <script src="https://unpkg.com/vue-chartkick@0.6.1"></script>
 ```
 
