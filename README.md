@@ -328,7 +328,7 @@ Set the background color
 
 ## Reactivity
 
-In Vue, passing object or array literals to props can lead to unnecessary re-renders.
+While some of the examples use object or array literals in props for convenience, this can lead to unncessary re-renders.
 
 ```vue
 <line-chart :library="{backgroundColor: '#eee'}"></line-chart>
@@ -453,7 +453,7 @@ Options are `google`, `highcharts`, and `chartjs`
 
 ### 0.7.0
 
-Vue Chartkick 0.7.0 adds support for Vue 3. There are a number of other changes to be aware of:
+Vue Chartkick 0.7.0 adds support for Vue 3. Vue 3 requires you to specify plugins for each app.
 
 ```javascript
 Vue.use(Chartkick.use(Chart))
@@ -465,11 +465,13 @@ to
 app.use(Chartkick.use(Chart))
 ```
 
-For the no package manager install, you must include Chartkick.js.
+For the no package manager install, Chartkick.js is no longer bundled, allowing you to update them independently. Include it manually before Vue Chartkick.
 
 ```html
 <script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
 ````
+
+Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See [the docs](#reactivity) for more details.
 
 ## Contributing
 
