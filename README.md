@@ -263,7 +263,7 @@ While some of the examples use object or array literals in props for demonstrati
 <line-chart :library="{backgroundColor: '#eee'}"></line-chart>
 ```
 
-Instead, use a data variable:
+Instead, use a data property:
 
 ```vue
 <line-chart :library="library"></line-chart>
