@@ -22,7 +22,7 @@ And add it to your app
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-app.use(Chartkick, adapter: Chart)
+app.use(Chartkick.use(Chart))
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -358,7 +358,7 @@ And add
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-app.use(Chartkick, adapter: Chart)
+app.use(Chartkick.use(Chart))
 ```
 
 ### Google Charts
@@ -403,7 +403,7 @@ And add
 import Chartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-app.use(Chartkick, adapter: Highcharts)
+app.use(Chartkick.use(Highcharts))
 ```
 
 ### No Package Manager
@@ -462,7 +462,7 @@ Vue.use(Chartkick.use(Chart))
 to
 
 ```javascript
-app.use(Chartkick, adapter: Chart)
+app.use(Chartkick.use(Chart))
 ```
 
 For the no package manager install, you must include Chartkick.js.
