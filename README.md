@@ -16,14 +16,13 @@ npm install vue-chartkick chart.js
 
 The latest version works with Vue 3. For Vue 2, use version 0.6.1 and [this readme](https://github.com/ankane/vue-chartkick/blob/v0.6.1/README.md).
 
-And add
+And add it to your app
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Vue.use(Chartkick.use(Chart))
+app.use(Chartkick, adapter: Chart)
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -356,11 +355,10 @@ npm install vue-chartkick chart.js
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Vue.use(Chartkick.use(Chart))
+app.use(Chartkick, adapter: Chart)
 ```
 
 ### Google Charts
@@ -374,10 +372,9 @@ npm install vue-chartkick
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 
-Vue.use(Chartkick)
+app.use(Chartkick)
 ```
 
 And include on the page
@@ -403,11 +400,10 @@ npm install vue-chartkick highcharts
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-Vue.use(Chartkick.use(Highcharts))
+app.use(Chartkick, adapter: Highcharts)
 ```
 
 ### No Package Manager
@@ -418,6 +414,12 @@ Include the charting library and the Chartkick library
 <script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.js"></script>
 <script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
 <script src="https://unpkg.com/vue-chartkick@0.6.1"></script>
+```
+
+And add
+
+```javascript
+app.use(VueChartkick)
 ```
 
 ### Multiple Libraries
@@ -451,7 +453,23 @@ Options are `google`, `highcharts`, and `chartjs`
 
 ### 0.7.0
 
-todo
+Vue Chartkick 0.7.0 adds support for Vue 3. There are a number of other changes to be aware of:
+
+```javascript
+Vue.use(Chartkick.use(Chart))
+```
+
+to
+
+```javascript
+app.use(Chartkick, adapter: Chart)
+```
+
+For the no package manager install, you must include Chartkick.js.
+
+```html
+<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
+````
 
 ## Contributing
 

@@ -1,6 +1,7 @@
 ## 0.7.0 (unreleased)
 
 - Added support for Vue 3
+- Chartkick is no longer bundled
 - Removed support for Vue 2
 - Removed dependencies
 

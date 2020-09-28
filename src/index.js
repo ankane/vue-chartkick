@@ -3,13 +3,13 @@ import { h } from 'vue'
 
 let chartId = 1
 
-let createComponent = function(Vue, tagName, chartType) {
+let createComponent = function(app, tagName, chartType) {
   let chartProps = [
     "adapter", "bytes", "code", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
     "legend", "library", "max", "messages", "min", "points", "precision", "prefix", "refresh",
     "round", "stacked", "suffix", "thousands", "title", "xmax", "xmin", "xtitle", "ytitle", "zeros"
   ]
-  Vue.component(tagName, {
+  app.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
     render: function() {
       return h(
@@ -86,18 +86,18 @@ let createComponent = function(Vue, tagName, chartType) {
   })
 }
 
-Chartkick.install = function(Vue, options) {
+Chartkick.install = function(app, options) {
   if (options && options.adapter) {
     Chartkick.addAdapter(options.adapter)
   }
-  createComponent(Vue, "line-chart", Chartkick.LineChart)
-  createComponent(Vue, "pie-chart", Chartkick.PieChart)
-  createComponent(Vue, "column-chart", Chartkick.ColumnChart)
-  createComponent(Vue, "bar-chart", Chartkick.BarChart)
-  createComponent(Vue, "area-chart", Chartkick.AreaChart)
-  createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
-  createComponent(Vue, "geo-chart", Chartkick.GeoChart)
-  createComponent(Vue, "timeline", Chartkick.Timeline)
+  createComponent(app, "line-chart", Chartkick.LineChart)
+  createComponent(app, "pie-chart", Chartkick.PieChart)
+  createComponent(app, "column-chart", Chartkick.ColumnChart)
+  createComponent(app, "bar-chart", Chartkick.BarChart)
+  createComponent(app, "area-chart", Chartkick.AreaChart)
+  createComponent(app, "scatter-chart", Chartkick.ScatterChart)
+  createComponent(app, "geo-chart", Chartkick.GeoChart)
+  createComponent(app, "timeline", Chartkick.Timeline)
 }
 
 const VueChartkick = Chartkick
