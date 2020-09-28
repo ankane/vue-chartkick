@@ -255,6 +255,22 @@ Use [dynamic components](https://vuejs.org/v2/guide/components.html#Dynamic-Comp
 <component is="column-chart"></component>
 ```
 
+### Reactivity
+
+While some of the examples use object or array literals in props for demonstration, this can lead to unnecessary re-renders.
+
+```vue
+<line-chart :library="{backgroundColor: '#eee'}"></line-chart>
+```
+
+Instead, use a data variable:
+
+```vue
+<line-chart :library="library"></line-chart>
+```
+
+See [this discussion](https://github.com/vuejs/vue/issues/4060) for more details.
+
 ### Global Options
 
 To set options for all of your charts, use:
@@ -325,22 +341,6 @@ Set the background color
 ```vue
 <line-chart :download="{background: '#fff'}"></line-chart>
 ```
-
-## Reactivity
-
-While some of the examples use object or array literals in props for convenience, this can lead to unncessary re-renders.
-
-```vue
-<line-chart :library="{backgroundColor: '#eee'}"></line-chart>
-```
-
-Instead, use a variable.
-
-```vue
-<line-chart :library="library"></line-chart>
-```
-
-See [this discussion](https://github.com/vuejs/vue/issues/4060) for more details.
 
 ## Installation
 
