@@ -14,6 +14,13 @@ Run
 npm install vue-chartkick chart.js
 ```
 
+Run the following script if you would like to use it in typescript. Otherwise you will experience error message of `Could not find a declaration file for module `
+
+```sh
+npm install @types/vue-chartkick @types/chart.js
+```
+
+
 And add
 
 ```javascript
