@@ -471,7 +471,7 @@ For the no package manager install, Chartkick.js is no longer bundled, allowing 
 <script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
 ````
 
-Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See [the docs](#reactivity) for more details.
+Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See the [reactivity docs](#reactivity) for more details.
 
 ## Contributing
 
