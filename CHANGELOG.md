@@ -1,4 +1,4 @@
-## 1.0.0 (unreleased)
+## 1.0.0 (2021-02-15)
 
 - Added support for Vue 3
 - Removed support for Vue 2
