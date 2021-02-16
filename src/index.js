@@ -1,24 +1,21 @@
 import Chartkick from 'chartkick'
-import deepEqual from 'deep-equal'
-import deepMerge from 'deepmerge'
+import { h } from 'vue'
 
 let chartId = 1
 
-let createComponent = function(Vue, tagName, chartType) {
+let createComponent = function(app, tagName, chartType) {
   let chartProps = [
     "adapter", "bytes", "code", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
     "legend", "library", "max", "messages", "min", "points", "precision", "prefix", "refresh",
     "round", "stacked", "suffix", "thousands", "title", "xmax", "xmin", "xtitle", "ytitle", "zeros"
   ]
-  Vue.component(tagName, {
+  app.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
-    render: function(createElement) {
-      return createElement(
+    render: function() {
+      return h(
         "div",
         {
-          attrs: {
-            id: this.chartId
-          },
+          id: this.chartId,
           style: this.chartStyle
         },
         ["Loading..."]
@@ -62,19 +59,11 @@ let createComponent = function(Vue, tagName, chartType) {
     },
     mounted: function() {
       this.updateChart()
-      this.savedState = this.currentState()
     },
     updated: function() {
-      // avoid updates when literal objects are used as props
-      // see https://github.com/ankane/vue-chartkick/pull/52
-      // and https://github.com/vuejs/vue/issues/4060
-      let currentState = this.currentState()
-      if (!deepEqual(currentState, this.savedState)) {
-        this.updateChart()
-        this.savedState = currentState
-      }
+      this.updateChart()
     },
-    beforeDestroy: function() {
+    beforeUnmount: function() {
       if (this.chart) {
         this.chart.destroy()
       }
@@ -92,37 +81,23 @@ let createComponent = function(Vue, tagName, chartType) {
           this.chart = null
           this.$el.innerText = "Loading..."
         }
-      },
-      currentState: function() {
-        return deepMerge({}, {
-          data: this.data,
-          chartOptions: this.chartOptions
-        })
       }
     }
   })
 }
 
-Chartkick.version = "0.6.1" // TODO remove in future versions
-Chartkick.install = function(Vue, options) {
+Chartkick.install = function(app, options) {
   if (options && options.adapter) {
     Chartkick.addAdapter(options.adapter)
   }
-  createComponent(Vue, "line-chart", Chartkick.LineChart)
-  createComponent(Vue, "pie-chart", Chartkick.PieChart)
-  createComponent(Vue, "column-chart", Chartkick.ColumnChart)
-  createComponent(Vue, "bar-chart", Chartkick.BarChart)
-  createComponent(Vue, "area-chart", Chartkick.AreaChart)
-  createComponent(Vue, "scatter-chart", Chartkick.ScatterChart)
-  createComponent(Vue, "geo-chart", Chartkick.GeoChart)
-  createComponent(Vue, "timeline", Chartkick.Timeline)
+  createComponent(app, "line-chart", Chartkick.LineChart)
+  createComponent(app, "pie-chart", Chartkick.PieChart)
+  createComponent(app, "column-chart", Chartkick.ColumnChart)
+  createComponent(app, "bar-chart", Chartkick.BarChart)
+  createComponent(app, "area-chart", Chartkick.AreaChart)
+  createComponent(app, "scatter-chart", Chartkick.ScatterChart)
+  createComponent(app, "geo-chart", Chartkick.GeoChart)
+  createComponent(app, "timeline", Chartkick.Timeline)
 }
 
-const VueChartkick = Chartkick
-
-// in browser
-if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(VueChartkick)
-}
-
-export default VueChartkick
+export default Chartkick

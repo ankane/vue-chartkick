@@ -14,14 +14,15 @@ Run
 npm install vue-chartkick chart.js
 ```
 
-And add
+The latest version works with Vue 3. For Vue 2, use version 0.6.1 and [this readme](https://github.com/ankane/vue-chartkick/blob/v0.6.1/README.md).
+
+And add it to your app
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Vue.use(Chartkick.use(Chart))
+app.use(Chartkick.use(Chart))
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -254,6 +255,22 @@ Use [dynamic components](https://vuejs.org/v2/guide/components.html#Dynamic-Comp
 <component is="column-chart"></component>
 ```
 
+### Reactivity
+
+While some of the examples use object or array literals in props for demonstration, this can lead to unnecessary re-renders.
+
+```vue
+<line-chart :library="{backgroundColor: '#eee'}"></line-chart>
+```
+
+Instead, use a data property:
+
+```vue
+<line-chart :library="library"></line-chart>
+```
+
+See [this discussion](https://github.com/vuejs/vue/issues/4060) for more details.
+
 ### Global Options
 
 To set options for all of your charts, use:
@@ -338,11 +355,10 @@ npm install vue-chartkick chart.js
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
-Vue.use(Chartkick.use(Chart))
+app.use(Chartkick.use(Chart))
 ```
 
 ### Google Charts
@@ -356,10 +372,9 @@ npm install vue-chartkick
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 
-Vue.use(Chartkick)
+app.use(Chartkick)
 ```
 
 And include on the page
@@ -385,11 +400,10 @@ npm install vue-chartkick highcharts
 And add
 
 ```javascript
-import Vue from 'vue'
 import Chartkick from 'vue-chartkick'
 import Highcharts from 'highcharts'
 
-Vue.use(Chartkick.use(Highcharts))
+app.use(Chartkick.use(Highcharts))
 ```
 
 ### No Package Manager
@@ -397,8 +411,15 @@ Vue.use(Chartkick.use(Highcharts))
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/vue-chartkick@0.6.1"></script>
+<script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
+<script src="https://unpkg.com/vue-chartkick@1.0.0"></script>
+```
+
+And add
+
+```javascript
+app.use(VueChartkick)
 ```
 
 ### Multiple Libraries
@@ -427,6 +448,30 @@ Options are `google`, `highcharts`, and `chartjs`
   })
 </script>
 ```
+
+## Upgrading
+
+### 1.0
+
+Vue Chartkick 1.0 adds support for Vue 3. Vue 3 requires you to specify plugins for each app.
+
+```javascript
+Vue.use(Chartkick.use(Chart))
+```
+
+to
+
+```javascript
+app.use(Chartkick.use(Chart))
+```
+
+For the no package manager install, Chartkick.js is no longer bundled, allowing you to update them independently. Include it manually before Vue Chartkick.
+
+```html
+<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
+````
+
+Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See [the docs](#reactivity) for more details.
 
 ## Contributing
 

@@ -6,9 +6,10 @@ import { uglify } from "rollup-plugin-uglify";
 
 const input = "src/index.js";
 const outputName = "VueChartkick";
-const external = Object.keys(pkg.peerDependencies || {});
-const esExternal = external.concat(Object.keys(pkg.dependencies || {}));
+const external = Object.keys(pkg.peerDependencies).concat(Object.keys(pkg.dependencies));
+const esExternal = external;
 const globals = {
+  chartkick: "Chartkick",
   vue: "Vue"
 };
 const banner =

@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "vue": ">=2.0.0"
+    "vue": ">=3.0.0"
   },
   "authors": [
     "ankane"
@@ -31,8 +31,6 @@
     "rollup-plugin-uglify": "^6.0.2"
   },
   "dependencies": {
-    "chartkick": "^3.2.0",
-    "deep-equal": "^1.0.1",
-    "deepmerge": "^4.2.0"
+    "chartkick": "^3.2.0"
   }
 }
