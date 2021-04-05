@@ -417,9 +417,9 @@ app.use(VueChartkick)
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@3.0.2/dist/chart.js"></script>
+<script src="https://unpkg.com/chart.js@3.0.2"></script>
 <script src="https://unpkg.com/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.js"></script>
-<script src="https://unpkg.com/chartkick@4.0.0/dist/chartkick.js"></script>
+<script src="https://unpkg.com/chartkick@4.0.0"></script>
 <script src="https://unpkg.com/vue-chartkick@1.1.0"></script>
 ```
 
