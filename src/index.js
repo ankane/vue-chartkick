@@ -5,20 +5,29 @@ let chartId = 1
 
 let createComponent = function(app, tagName, chartType) {
   let chartProps = [
-    "adapter", "bytes", "code", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "label",
-    "legend", "library", "max", "messages", "min", "points", "precision", "prefix", "refresh",
+    "adapter", "bytes", "code", "colors", "curve", "dataset", "decimal", "discrete", "donut", "download", "empty", "label",
+    "legend", "library", "loading", "max", "messages", "min", "points", "precision", "prefix", "refresh",
     "round", "stacked", "suffix", "thousands", "title", "xmax", "xmin", "xtitle", "ytitle", "zeros"
   ]
   app.component(tagName, {
     props: ["data", "id", "width", "height"].concat(chartProps),
     render: function() {
+      // check if undefined so works with empty string
+      let loading = this.chartOptions.loading !== undefined ? this.chartOptions.loading : "Loading...";
+
+      // h() accepts VNodes,
+      // but limit to string since it may be used by Chartkick.js
+      if (typeof loading !== "string") {
+        throw new Error("loading must be a string");
+      }
+
       return h(
         "div",
         {
           id: this.chartId,
           style: this.chartStyle
         },
-        ["Loading..."]
+        [loading]
       )
     },
     data: function() {

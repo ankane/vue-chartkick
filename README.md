@@ -19,10 +19,10 @@ The latest version works with Vue 3. For Vue 2, use version 0.6.1 and [this read
 And add it to your app
 
 ```javascript
-import Chartkick from 'vue-chartkick'
-import Chart from 'chart.js'
+import VueChartkick from 'vue-chartkick'
+import 'chartkick/chart.js'
 
-app.use(Chartkick.use(Chart))
+app.use(VueChartkick)
 ```
 
 This sets up Chartkick with Chart.js. For other charting libraries, see [detailed instructions](#installation).
@@ -221,10 +221,16 @@ Friendly byte sizes - *Chart.js 2.8+*
 <line-chart :bytes="true"></line-chart>
 ```
 
-Show a message when data is empty
+Specify the message when the chart is loading
 
 ```vue
-<line-chart :messages="{empty: 'No data'}"></line-chart>
+<line-chart loading="Loading..."></line-chart>
+```
+
+Specify the message when data is empty
+
+```vue
+<line-chart empty="No data"></line-chart>
 ```
 
 Refresh data from a remote source every `n` seconds
@@ -355,10 +361,10 @@ npm install vue-chartkick chart.js
 And add
 
 ```javascript
-import Chartkick from 'vue-chartkick'
-import Chart from 'chart.js'
+import VueChartkick from 'vue-chartkick'
+import 'chartkick/chart.js'
 
-app.use(Chartkick.use(Chart))
+app.use(VueChartkick)
 ```
 
 ### Google Charts
@@ -372,9 +378,9 @@ npm install vue-chartkick
 And add
 
 ```javascript
-import Chartkick from 'vue-chartkick'
+import VueChartkick from 'vue-chartkick'
 
-app.use(Chartkick)
+app.use(VueChartkick)
 ```
 
 And include on the page
@@ -400,10 +406,10 @@ npm install vue-chartkick highcharts
 And add
 
 ```javascript
-import Chartkick from 'vue-chartkick'
-import Highcharts from 'highcharts'
+import VueChartkick from 'vue-chartkick'
+import 'chartkick/highcharts'
 
-app.use(Chartkick.use(Highcharts))
+app.use(VueChartkick)
 ```
 
 ### No Package Manager
@@ -411,9 +417,10 @@ app.use(Chartkick.use(Highcharts))
 Include the charting library and the Chartkick library
 
 ```html
-<script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
-<script src="https://unpkg.com/vue-chartkick@1.0.0"></script>
+<script src="https://unpkg.com/chart.js@3.0.2/dist/chart.js"></script>
+<script src="https://unpkg.com/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.js"></script>
+<script src="https://unpkg.com/chartkick@4.0.0/dist/chartkick.js"></script>
+<script src="https://unpkg.com/vue-chartkick@1.1.0"></script>
 ```
 
 And add

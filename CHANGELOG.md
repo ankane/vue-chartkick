@@ -1,3 +1,8 @@
+## 1.1.0 (unreleased)
+
+- Added `loading` option
+- Prefer `empty` over `messages: {empty: ...}`
+
 ## 1.0.0 (2021-02-15)
 
 - Added support for Vue 3

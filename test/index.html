@@ -5,8 +5,9 @@
     <title>Vue Chartkick</title>
 
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="https://unpkg.com/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
-    <script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
+    <script src="https://unpkg.com/chart.js@3.0.2/dist/chart.js"></script>
+    <script src="https://unpkg.com/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.js"></script>
+    <script src="https://unpkg.com/chartkick@4.0.0/dist/chartkick.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../dist/vue-chartkick.js"></script>
   </head>
@@ -19,7 +20,7 @@
       <area-chart xmin="2013-02-01" xmax="2013-03-01" :data="{'2013-02-10 00:00:00 -0800': 11, '2013-02-11 00:00:00 -0800': 6}"></area-chart>
       <scatter-chart :data="[[174.0, 80.0], [176.5, 82.3], [180.3, 73.6]]"></scatter-chart>
       <geo-chart :data="[['United States', 44], ['Germany', 23], ['Brazil', 22]]"></geo-chart>
-      <line-chart :data="noData"></line-chart>
+      <line-chart :data="noData" loading="Loading!!"></line-chart>
       <component is="bar-chart" :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></component>
       {{count}}
     </div>
