@@ -13,12 +13,12 @@ let createComponent = function(app, tagName, chartType) {
     props: ["data", "id", "width", "height"].concat(chartProps),
     render: function() {
       // check if undefined so works with empty string
-      let loading = this.chartOptions.loading !== undefined ? this.chartOptions.loading : "Loading...";
+      let loading = this.chartOptions.loading !== undefined ? this.chartOptions.loading : "Loading..."
 
       // h() accepts VNodes,
       // but limit to string since it may be used by Chartkick.js
       if (typeof loading !== "string") {
-        throw new Error("loading must be a string");
+        throw new Error("loading must be a string")
       }
 
       return h(
