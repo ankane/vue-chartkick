@@ -32,7 +32,7 @@ This sets up Chartkick with Chart.js. For other charting libraries, see [detaile
 Line chart
 
 ```vue
-<line-chart :data="{'2017-01-01': 11, '2017-01-02': 6}"></line-chart>
+<line-chart :data="{'2021-01-01': 11, '2021-01-02': 6}"></line-chart>
 ```
 
 Pie chart
@@ -56,7 +56,7 @@ Bar chart
 Area chart
 
 ```vue
-<area-chart :data="{'2017-01-01': 11, '2017-01-02': 6}"></area-chart>
+<area-chart :data="{'2021-01-01': 11, '2021-01-02': 6}"></area-chart>
 ```
 
 Scatter chart
@@ -81,8 +81,8 @@ Multiple series
 
 ```vue
 data = [
-  {name: 'Workout', data: {'2017-01-01': 3, '2017-01-02': 4}},
-  {name: 'Call parents', data: {'2017-01-01': 5, '2017-01-02': 3}}
+  {name: 'Workout', data: {'2021-01-01': 3, '2021-01-02': 4}},
+  {name: 'Call parents', data: {'2021-01-01': 5, '2021-01-02': 3}}
 ];
 
 // and
@@ -116,7 +116,7 @@ Min and max values
 Min and max for x-axis - *Chart.js*
 
 ```vue
-<line-chart xmin="2018-01-01" xmax="2019-01-01"></line-chart>
+<line-chart xmin="2021-01-01" xmax="2022-01-01"></line-chart>
 ```
 
 Colors
@@ -299,7 +299,7 @@ Pass data as an array or object
 Times can be a `Date` or a string (strings are parsed)
 
 ```vue
-<line-chart :data="[[new Date(), 5], ['2017-01-01 00:00:00 UTC', 7]]"></line-chart>
+<line-chart :data="[[new Date(), 5], ['2021-01-01 00:00:00 UTC', 7]]"></line-chart>
 ```
 
 Data can also be a callback
