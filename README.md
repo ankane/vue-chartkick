@@ -482,6 +482,10 @@ For the no package manager install, Chartkick.js is no longer bundled, allowing 
 
 Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See the [reactivity docs](#reactivity) for more details.
 
+## History
+
+View the [changelog](https://github.com/ankane/vue-chartkick/blob/master/CHANGELOG.md)
+
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
