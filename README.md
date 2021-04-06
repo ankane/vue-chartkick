@@ -447,12 +447,14 @@ Options are `google`, `highcharts`, and `chartjs`
 </div>
 
 <script>
-  var app = new Vue({
+  var app = Vue.createApp({
     el: "#app",
     data: {
       chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
     }
   })
+  app.use(VueChartkick)
+  app.mount("#app")
 </script>
 ```
 
