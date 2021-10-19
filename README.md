@@ -86,7 +86,32 @@ data = [
 ];
 
 // and
-<line-chart :data="data" />
+<line-chart :data="data"></line-chart>
+```
+
+## Data
+
+Pass data as an array or object
+
+```vue
+<line-chart :data="[['2021-01-01', 2], ['2021-01-02', 3]]"></line-chart>
+```
+
+or
+
+```vue
+<line-chart :data="{'2021-01-01': 2, '2021-01-02': 3}"></line-chart>
+```
+
+Data can also be a callback
+
+```vue
+function fetchData(success, fail) {
+  success({"2021-01-01": 2, "2021-01-02": 3})
+  // or fail("Data not available")
+}
+
+<line-chart :data="fetchData"></line-chart>
 ```
 
 ### Say Goodbye To Timeouts
@@ -97,7 +122,7 @@ Make your pages load super fast and stop worrying about timeouts. Give each char
 <line-chart data="/stocks"></line-chart>
 ```
 
-### Options
+## Options
 
 Id, width, and height
 
@@ -285,32 +310,6 @@ To set options for all of your charts, use:
 Chartkick.options = {
   colors: ["#b00", "#666"]
 }
-```
-
-### Data
-
-Pass data as an array or object
-
-```vue
-<pie-chart :data="{'Blueberry': 44, 'Strawberry': 23}"></pie-chart>
-<pie-chart :data="[['Blueberry', 44], ['Strawberry', 23]]"></pie-chart>
-```
-
-Times can be a `Date` or a string (strings are parsed)
-
-```vue
-<line-chart :data="[[new Date(), 5], ['2021-01-01 00:00:00 UTC', 7]]"></line-chart>
-```
-
-Data can also be a callback
-
-```vue
-function fetchData(success, fail) {
-  success({"Blueberry": 44, "Strawberry": 23})
-  // or fail("Data not available")
-}
-
-<pie-chart :data="fetchData" />
 ```
 
 ### Multiple Series
