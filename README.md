@@ -79,13 +79,16 @@ Timeline - *Google Charts*
 
 Multiple series
 
-```vue
+```javascript
 data = [
   {name: 'Workout', data: {'2021-01-01': 3, '2021-01-02': 4}},
   {name: 'Call parents', data: {'2021-01-01': 5, '2021-01-02': 3}}
 ];
+```
 
-// and
+and
+
+```vue
 <line-chart :data="data"></line-chart>
 ```
 
@@ -105,12 +108,16 @@ or
 
 Data can also be a callback
 
-```vue
+```javascript
 function fetchData(success, fail) {
   success({"2021-01-01": 2, "2021-01-02": 3})
   // or fail("Data not available")
 }
+```
 
+and
+
+```vue
 <line-chart :data="fetchData"></line-chart>
 ```
 
