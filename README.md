@@ -94,19 +94,21 @@ and
 
 ## Data
 
-Pass data as an array or object
+Data can be an array, object, callback, or URL.
+
+#### Array
 
 ```vue
 <line-chart :data="[['2021-01-01', 2], ['2021-01-02', 3]]"></line-chart>
 ```
 
-or
+#### Object
 
 ```vue
 <line-chart :data="{'2021-01-01': 2, '2021-01-02': 3}"></line-chart>
 ```
 
-Data can also be a callback
+#### Callback
 
 ```javascript
 function fetchData(success, fail) {
@@ -121,7 +123,7 @@ and
 <line-chart :data="fetchData"></line-chart>
 ```
 
-### Say Goodbye To Timeouts
+#### URL
 
 Make your pages load super fast and stop worrying about timeouts. Give each chart its own endpoint.
 
