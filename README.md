@@ -11,7 +11,7 @@ Supports [Chart.js](https://www.chartjs.org/), [Google Charts](https://developer
 Run
 
 ```sh
-npm install vue-chartkick chart.js
+npm install vue-chartkick@0.6.1 chart.js@2
 ```
 
 And add
@@ -332,7 +332,7 @@ Set the background color
 Run
 
 ```sh
-npm install vue-chartkick chart.js
+npm install vue-chartkick@0.6.1 chart.js@2
 ```
 
 And add
@@ -350,7 +350,7 @@ Vue.use(Chartkick.use(Chart))
 Run
 
 ```sh
-npm install vue-chartkick
+npm install vue-chartkick@0.6.1
 ```
 
 And add
@@ -379,7 +379,7 @@ Chartkick.configure({language: "de", mapsApiKey: "..."})
 Run
 
 ```sh
-npm install vue-chartkick highcharts
+npm install vue-chartkick@0.6.1 highcharts
 ```
 
 And add
