@@ -14,7 +14,7 @@ Run
 npm install vue-chartkick chart.js
 ```
 
-The latest version works with Vue 3. For Vue 2, use version 0.6.1 and [this readme](https://github.com/ankane/vue-chartkick/blob/v0.6.1/README.md).
+The latest version works with Vue 3. For Vue 2, use version 0.6.1 and [this readme](https://github.com/ankane/vue-chartkick/blob/vue2-docs/README.md).
 
 And add it to your app
 
