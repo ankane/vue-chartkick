@@ -2,8 +2,13 @@
   "name": "vue-chartkick",
   "version": "1.1.0",
   "description": "Create beautiful JavaScript charts with one line of Vue",
-  "main": "dist/vue-chartkick.js",
-  "module": "dist/vue-chartkick.esm.js",
+  "type": "module",
+  "main": "./dist/vue-chartkick.js",
+  "module": "./dist/vue-chartkick.esm.js",
+  "exports": {
+    "require": "./dist/vue-chartkick.js",
+    "import": "./dist/vue-chartkick.esm.js"
+  },
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src"
