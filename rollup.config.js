@@ -14,10 +14,9 @@ const globals = {
 };
 const banner =
 `/*!
- * Vue Chartkick
+ * Vue Chartkick v${pkg.version}
  * ${pkg.description}
  * ${pkg.repository.url}
- * v${pkg.version}
  * ${pkg.license} License
  */
 `;
