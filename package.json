@@ -6,8 +6,10 @@
   "main": "./dist/vue-chartkick.js",
   "module": "./dist/vue-chartkick.esm.js",
   "exports": {
-    "require": "./dist/vue-chartkick.js",
-    "import": "./dist/vue-chartkick.esm.js"
+    ".": {
+      "require": "./dist/vue-chartkick.js",
+      "import": "./dist/vue-chartkick.esm.js"
+    }
   },
   "scripts": {
     "build": "rollup -c",
