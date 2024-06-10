@@ -468,30 +468,6 @@ Options are `google`, `highcharts`, and `chartjs`
 </script>
 ```
 
-## Upgrading
-
-### 1.0
-
-Vue Chartkick 1.0 adds support for Vue 3. Vue 3 requires you to specify plugins for each app.
-
-```javascript
-Vue.use(Chartkick.use(Chart))
-```
-
-to
-
-```javascript
-app.use(Chartkick.use(Chart))
-```
-
-For the no package manager install, Chartkick.js is no longer bundled, allowing you to update them independently. Include it manually before Vue Chartkick.
-
-```html
-<script src="https://unpkg.com/chartkick@3.2.1/dist/chartkick.js"></script>
-````
-
-Finally, Vue Chartkick no longer uses custom logic to see if a re-render is necessary. See the [reactivity docs](#reactivity) for more details.
-
 ## History
 
 View the [changelog](https://github.com/ankane/vue-chartkick/blob/master/CHANGELOG.md)
