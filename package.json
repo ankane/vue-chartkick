@@ -6,7 +6,9 @@
   "license": "MIT",
   "author": "Andrew Kane",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-chartkick.js",
   "module": "./dist/vue-chartkick.esm.js",
   "exports": {
