@@ -88,7 +88,7 @@ let createComponent = function(app, tagName, chartType) {
         } else if (this.chart) {
           this.chart.destroy()
           this.chart = null
-          this.$el.innerText = "Loading..."
+          this.$el.innerText = this.chartOptions.loading !== undefined ? this.chartOptions.loading : "Loading..."
         }
       }
     }
